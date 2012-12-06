@@ -1,0 +1,2 @@
+vhdl work "lfsr.vhd"
+vhdl work "tb_lfsr.vhd"

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/pin3da/Repos/shrinking_generator/lfsr.xst" -ofn "/home/pin3da/Repos/shrinking_generator/lfsr.syr" 

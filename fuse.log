@@ -1,0 +1,21 @@
+Running: /home/pin3da/mybin/14.2/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/pin3da/Repos/shrinking_generator/tb_lfsr_isim_beh.exe -prj /home/pin3da/Repos/shrinking_generator/tb_lfsr_beh.prj work.tb_lfsr 
+ISim P.28xd (signature 0x54af6ca1)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/lfsr.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/tb_lfsr.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 94044 KB
+Fuse CPU Usage: 2850 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture arhc_lfsr of entity lfsr [\lfsr(16)\]
+Compiling architecture behavior of entity tb_lfsr
+Time Resolution for simulation is 1ps.
+Compiled 5 VHDL Units
+Built simulation executable /home/pin3da/Repos/shrinking_generator/tb_lfsr_isim_beh.exe
+Fuse Memory Usage: 198960 KB
+Fuse CPU Usage: 2900 ms
+GCC CPU Usage: 1560 ms

@@ -1,0 +1,6 @@
+V3 3
+FL /home/pin3da/Repos/shrinking_generator/lfsr.vhd 2012/12/05.21:34:38 P.28xd
+EN work/lfsr 1354761314 FL /home/pin3da/Repos/shrinking_generator/lfsr.vhd \
+      PB ieee/std_logic_1164 1341906176
+AR work/lfsr/arhc_lfsr 1354761315 \
+      FL /home/pin3da/Repos/shrinking_generator/lfsr.vhd EN work/lfsr 1354761314
