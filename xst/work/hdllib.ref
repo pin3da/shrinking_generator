@@ -1,4 +1,4 @@
-AR lfsr arhc_lfsr /home/pin3da/Repos/shrinking_generator/lfsr.vhd sub00/vhpl01 1354761315
+AR lfsr arhc_lfsr /home/pin3da/Repos/shrinking_generator/lfsr.vhd sub00/vhpl01 1355459863
 AR ram arch_ram /home/pin3da/Repos/shrinking_generator/ram.vhd sub00/vhpl03 1354767716
-EN lfsr NULL /home/pin3da/Repos/shrinking_generator/lfsr.vhd sub00/vhpl00 1354761314
+EN lfsr NULL /home/pin3da/Repos/shrinking_generator/lfsr.vhd sub00/vhpl00 1355459862
 EN ram NULL /home/pin3da/Repos/shrinking_generator/ram.vhd sub00/vhpl02 1354767715

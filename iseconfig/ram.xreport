@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-12-05T23:25:01</DateModified>
+  <DateModified>2012-12-08T18:48:49</DateModified>
   <ModuleName>ram</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/pin3da/Repos/shrinking_generator/iseconfig/ram.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/pin3da/Repos/shrinking_generator</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/pin3da/Repos/shrinking_generator/</ImplementationReportsDirectory>
   <DateInitialized>2012-12-05T23:25:01</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

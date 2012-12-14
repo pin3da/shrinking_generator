@@ -1,0 +1,4 @@
+La implementación está basada en galois lfsr, y el libro VHDL design object aproach
+---------------------------
+los polinomios escogidos son los que generan un periodo máximo.. están tomados
+de ... LFSR theory and implementation, maximal length sequences, and comprehensive feedback tables for lengths from 7 to 16,777,215 (3 to 24 stages), and partial tables for lengths up to 4,294,967,295 (25 to 32 stages).
