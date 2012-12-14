@@ -1,6 +1,6 @@
-EN lfsr_127 NULL /home/pin3da/Repos/shrinking_generator/lfsr_127.vhd sub00/vhpl06 1355462540
+EN lfsr_127 NULL /home/pin3da/Repos/shrinking_generator/lfsr_127.vhd sub00/vhpl06 1355494534
 EN lfsr_128 NULL /home/pin3da/Repos/shrinking_generator/lfsr_128.vhd sub00/vhpl04 1355461600
-AR lfsr_127 arhc_lfsr_127 /home/pin3da/Repos/shrinking_generator/lfsr_127.vhd sub00/vhpl07 1355462541
+AR lfsr_127 arhc_lfsr_127 /home/pin3da/Repos/shrinking_generator/lfsr_127.vhd sub00/vhpl07 1355494535
 AR lfsr arhc_lfsr /home/pin3da/Repos/shrinking_generator/lfsr.vhd sub00/vhpl01 1355459863
 AR decode_ram arch_decode_ram /home/pin3da/Repos/shrinking_generator/decode_ram.vhd sub00/vhpl13 1355471064
 AR lfsr_128 arhc_lfsr /home/pin3da/Repos/shrinking_generator/lfsr_128.vhd sub00/vhpl05 1355461601

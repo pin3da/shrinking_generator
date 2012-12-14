@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file Encode_ram.vhd -- 03:06:25 12/14/2012
+-- VHDL Instantiation Created from source file Encode_ram.vhd -- 09:12:34 12/14/2012
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types

@@ -1,1 +1,2 @@
 vhdtdtfi -prj shrinking_generator -o /home/pin3da/Repos/shrinking_generator/decode_ram.vhi -module decode_ram -template /home/pin3da/mybin/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work decode_ram.vhd 
+vhdtdtfi -prj shrinking_generator -o /home/pin3da/Repos/shrinking_generator/decode_ram.vhi -module decode_ram -template /home/pin3da/mybin/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work decode_ram.vhd 

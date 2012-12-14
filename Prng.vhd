@@ -146,7 +146,19 @@ begin
 		data => ,
 		serialOut => 
 	);
-
+   
+   Inst_Encode_ram: Encode_ram PORT MAP(
+		status_ram => ,
+		current_data => ,
+		current_block => ,
+		out_ram => 
+	);
+   
+   Inst_decode_ram: decode_ram PORT MAP(
+		current_block => ,
+		ram_data => ,
+		out_data_rx => 
+	);
 
 end arch_prng;
 

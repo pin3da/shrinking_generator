@@ -24,7 +24,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 entity lfsr_127 is
 
-  generic(constant N: integer := 128);
+  generic(constant N: integer := 127);
 
   port (
 	 lfsr_in : in std_logic_vector (N-1 downto 0);
@@ -36,7 +36,8 @@ end entity;
 
 architecture arhc_lfsr_127 of lfsr_127 is
    signal lfsr_tmp     : std_logic_vector (N-1 downto 0):= (0=>'1',others=>'0');
-   constant polynome  : std_logic_vector (N-1 downto 0):= X"60000000000000000000000000000000";
+   constant polynome_tmp  : std_logic_vector (127 downto 0):= X"60000000000000000000000000000000";
+   constant polynome  : std_logic_vector (126 downto 0):= polynome_tmp(126 downto 0);
 begin
    process (clk, reset) 
     variable lsb    :std_logic;   
