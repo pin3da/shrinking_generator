@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/pin3da/Repos/shrinking_generator/tb_lfsr_isim_beh.exe" -prj "/home/pin3da/Repos/shrinking_generator/tb_lfsr_beh.prj" "work.tb_lfsr" 
+-intstyle "ise" -incremental -o "/home/pin3da/Repos/shrinking_generator/tb_tx_isim_beh.exe" -prj "/home/pin3da/Repos/shrinking_generator/tb_tx_beh.prj" "work.tb_tx" 

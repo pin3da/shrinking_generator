@@ -1,0 +1,602 @@
+Release 14.2 - xst P.28xd (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+Reading design: lfsr_127.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lfsr_127.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lfsr_127"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : lfsr_127
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Block
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Block
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/lfsr_127.vhd" in Library work.
+Architecture arhc_lfsr_127 of Entity lfsr_127 is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <lfsr_127> in library <work> (architecture <arhc_lfsr_127>) with generics.
+	N = 128
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <lfsr_127> in library <work> (Architecture <arhc_lfsr_127>).
+	N = 128
+WARNING:Xst:819 - "/home/pin3da/Repos/shrinking_generator/lfsr_127.vhd" line 41: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <lfsr_tmp>, <lfsr_in>
+Entity <lfsr_127> analyzed. Unit <lfsr_127> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <lfsr_127>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/lfsr_127.vhd".
+    Found 128-bit register for signal <lfsr_tmp>.
+    Found 1-bit xor2 for signal <lfsr_tmp$xor0000> created at line 52.
+    Found 1-bit xor2 for signal <lfsr_tmp$xor0001> created at line 52.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <lfsr_127> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 128
+ 1-bit register                                        : 128
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 128
+ Flip-Flops                                            : 128
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <lfsr_127> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lfsr_127, actual ratio is 3.
+FlipFlop lfsr_tmp_127 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : lfsr_127.ngr
+Top Level Output File Name         : lfsr_127
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 258
+
+Cell Usage :
+# BELS                             : 259
+#      GND                         : 1
+#      LUT2                        : 258
+# FlipFlops/Latches                : 129
+#      FDCP                        : 129
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 257
+#      IBUF                        : 129
+#      OBUF                        : 128
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      148  out of   4656     3%  
+ Number of Slice Flip Flops:            128  out of   9312     1%  
+ Number of 4 input LUTs:                258  out of   9312     2%  
+ Number of IOs:                         258
+ Number of bonded IOBs:                 258  out of    232   111% (*) 
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         1  out of     24     4%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 129   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------+------------------------+-------+
+Control Signal                               | Buffer(FF name)        | Load  |
+---------------------------------------------+------------------------+-------+
+lfsr_tmp_127_and0000(lfsr_tmp_127_and00001:O)| NONE(lfsr_tmp_127)     | 2     |
+lfsr_tmp_127_and0001(lfsr_tmp_127_and00011:O)| NONE(lfsr_tmp_127)     | 2     |
+lfsr_tmp_0_and0000(lfsr_tmp_0_and00001:O)    | NONE(lfsr_tmp_0)       | 1     |
+lfsr_tmp_0_and0001(lfsr_tmp_0_and00011:O)    | NONE(lfsr_tmp_0)       | 1     |
+lfsr_tmp_100_and0000(lfsr_tmp_100_and00001:O)| NONE(lfsr_tmp_100)     | 1     |
+lfsr_tmp_100_and0001(lfsr_tmp_100_and00011:O)| NONE(lfsr_tmp_100)     | 1     |
+lfsr_tmp_101_and0000(lfsr_tmp_101_and00001:O)| NONE(lfsr_tmp_101)     | 1     |
+lfsr_tmp_101_and0001(lfsr_tmp_101_and00011:O)| NONE(lfsr_tmp_101)     | 1     |
+lfsr_tmp_102_and0000(lfsr_tmp_102_and00001:O)| NONE(lfsr_tmp_102)     | 1     |
+lfsr_tmp_102_and0001(lfsr_tmp_102_and00011:O)| NONE(lfsr_tmp_102)     | 1     |
+lfsr_tmp_103_and0000(lfsr_tmp_103_and00001:O)| NONE(lfsr_tmp_103)     | 1     |
+lfsr_tmp_103_and0001(lfsr_tmp_103_and00011:O)| NONE(lfsr_tmp_103)     | 1     |
+lfsr_tmp_104_and0000(lfsr_tmp_104_and00001:O)| NONE(lfsr_tmp_104)     | 1     |
+lfsr_tmp_104_and0001(lfsr_tmp_104_and00011:O)| NONE(lfsr_tmp_104)     | 1     |
+lfsr_tmp_105_and0000(lfsr_tmp_105_and00001:O)| NONE(lfsr_tmp_105)     | 1     |
+lfsr_tmp_105_and0001(lfsr_tmp_105_and00011:O)| NONE(lfsr_tmp_105)     | 1     |
+lfsr_tmp_106_and0000(lfsr_tmp_106_and00001:O)| NONE(lfsr_tmp_106)     | 1     |
+lfsr_tmp_106_and0001(lfsr_tmp_106_and00011:O)| NONE(lfsr_tmp_106)     | 1     |
+lfsr_tmp_107_and0000(lfsr_tmp_107_and00001:O)| NONE(lfsr_tmp_107)     | 1     |
+lfsr_tmp_107_and0001(lfsr_tmp_107_and00011:O)| NONE(lfsr_tmp_107)     | 1     |
+lfsr_tmp_108_and0000(lfsr_tmp_108_and00001:O)| NONE(lfsr_tmp_108)     | 1     |
+lfsr_tmp_108_and0001(lfsr_tmp_108_and00011:O)| NONE(lfsr_tmp_108)     | 1     |
+lfsr_tmp_109_and0000(lfsr_tmp_109_and00001:O)| NONE(lfsr_tmp_109)     | 1     |
+lfsr_tmp_109_and0001(lfsr_tmp_109_and00011:O)| NONE(lfsr_tmp_109)     | 1     |
+lfsr_tmp_10_and0000(lfsr_tmp_10_and00001:O)  | NONE(lfsr_tmp_10)      | 1     |
+lfsr_tmp_10_and0001(lfsr_tmp_10_and00011:O)  | NONE(lfsr_tmp_10)      | 1     |
+lfsr_tmp_110_and0000(lfsr_tmp_110_and00001:O)| NONE(lfsr_tmp_110)     | 1     |
+lfsr_tmp_110_and0001(lfsr_tmp_110_and00011:O)| NONE(lfsr_tmp_110)     | 1     |
+lfsr_tmp_111_and0000(lfsr_tmp_111_and00001:O)| NONE(lfsr_tmp_111)     | 1     |
+lfsr_tmp_111_and0001(lfsr_tmp_111_and00011:O)| NONE(lfsr_tmp_111)     | 1     |
+lfsr_tmp_112_and0000(lfsr_tmp_112_and00001:O)| NONE(lfsr_tmp_112)     | 1     |
+lfsr_tmp_112_and0001(lfsr_tmp_112_and00011:O)| NONE(lfsr_tmp_112)     | 1     |
+lfsr_tmp_113_and0000(lfsr_tmp_113_and00001:O)| NONE(lfsr_tmp_113)     | 1     |
+lfsr_tmp_113_and0001(lfsr_tmp_113_and00011:O)| NONE(lfsr_tmp_113)     | 1     |
+lfsr_tmp_114_and0000(lfsr_tmp_114_and00001:O)| NONE(lfsr_tmp_114)     | 1     |
+lfsr_tmp_114_and0001(lfsr_tmp_114_and00011:O)| NONE(lfsr_tmp_114)     | 1     |
+lfsr_tmp_115_and0000(lfsr_tmp_115_and00001:O)| NONE(lfsr_tmp_115)     | 1     |
+lfsr_tmp_115_and0001(lfsr_tmp_115_and00011:O)| NONE(lfsr_tmp_115)     | 1     |
+lfsr_tmp_116_and0000(lfsr_tmp_116_and00001:O)| NONE(lfsr_tmp_116)     | 1     |
+lfsr_tmp_116_and0001(lfsr_tmp_116_and00011:O)| NONE(lfsr_tmp_116)     | 1     |
+lfsr_tmp_117_and0000(lfsr_tmp_117_and00001:O)| NONE(lfsr_tmp_117)     | 1     |
+lfsr_tmp_117_and0001(lfsr_tmp_117_and00011:O)| NONE(lfsr_tmp_117)     | 1     |
+lfsr_tmp_118_and0000(lfsr_tmp_118_and00001:O)| NONE(lfsr_tmp_118)     | 1     |
+lfsr_tmp_118_and0001(lfsr_tmp_118_and00011:O)| NONE(lfsr_tmp_118)     | 1     |
+lfsr_tmp_119_and0000(lfsr_tmp_119_and00001:O)| NONE(lfsr_tmp_119)     | 1     |
+lfsr_tmp_119_and0001(lfsr_tmp_119_and00011:O)| NONE(lfsr_tmp_119)     | 1     |
+lfsr_tmp_11_and0000(lfsr_tmp_11_and00001:O)  | NONE(lfsr_tmp_11)      | 1     |
+lfsr_tmp_11_and0001(lfsr_tmp_11_and00011:O)  | NONE(lfsr_tmp_11)      | 1     |
+lfsr_tmp_120_and0000(lfsr_tmp_120_and00001:O)| NONE(lfsr_tmp_120)     | 1     |
+lfsr_tmp_120_and0001(lfsr_tmp_120_and00011:O)| NONE(lfsr_tmp_120)     | 1     |
+lfsr_tmp_121_and0000(lfsr_tmp_121_and00001:O)| NONE(lfsr_tmp_121)     | 1     |
+lfsr_tmp_121_and0001(lfsr_tmp_121_and00011:O)| NONE(lfsr_tmp_121)     | 1     |
+lfsr_tmp_122_and0000(lfsr_tmp_122_and00001:O)| NONE(lfsr_tmp_122)     | 1     |
+lfsr_tmp_122_and0001(lfsr_tmp_122_and00011:O)| NONE(lfsr_tmp_122)     | 1     |
+lfsr_tmp_123_and0000(lfsr_tmp_123_and00001:O)| NONE(lfsr_tmp_123)     | 1     |
+lfsr_tmp_123_and0001(lfsr_tmp_123_and00011:O)| NONE(lfsr_tmp_123)     | 1     |
+lfsr_tmp_124_and0000(lfsr_tmp_124_and00001:O)| NONE(lfsr_tmp_124)     | 1     |
+lfsr_tmp_124_and0001(lfsr_tmp_124_and00011:O)| NONE(lfsr_tmp_124)     | 1     |
+lfsr_tmp_125_and0000(lfsr_tmp_125_and00001:O)| NONE(lfsr_tmp_125)     | 1     |
+lfsr_tmp_125_and0001(lfsr_tmp_125_and00011:O)| NONE(lfsr_tmp_125)     | 1     |
+lfsr_tmp_126_and0000(lfsr_tmp_126_and00001:O)| NONE(lfsr_tmp_126)     | 1     |
+lfsr_tmp_126_and0001(lfsr_tmp_126_and00011:O)| NONE(lfsr_tmp_126)     | 1     |
+lfsr_tmp_12_and0000(lfsr_tmp_12_and00001:O)  | NONE(lfsr_tmp_12)      | 1     |
+lfsr_tmp_12_and0001(lfsr_tmp_12_and00011:O)  | NONE(lfsr_tmp_12)      | 1     |
+lfsr_tmp_13_and0000(lfsr_tmp_13_and00001:O)  | NONE(lfsr_tmp_13)      | 1     |
+lfsr_tmp_13_and0001(lfsr_tmp_13_and00011:O)  | NONE(lfsr_tmp_13)      | 1     |
+lfsr_tmp_14_and0000(lfsr_tmp_14_and00001:O)  | NONE(lfsr_tmp_14)      | 1     |
+lfsr_tmp_14_and0001(lfsr_tmp_14_and00011:O)  | NONE(lfsr_tmp_14)      | 1     |
+lfsr_tmp_15_and0000(lfsr_tmp_15_and00001:O)  | NONE(lfsr_tmp_15)      | 1     |
+lfsr_tmp_15_and0001(lfsr_tmp_15_and00011:O)  | NONE(lfsr_tmp_15)      | 1     |
+lfsr_tmp_16_and0000(lfsr_tmp_16_and00001:O)  | NONE(lfsr_tmp_16)      | 1     |
+lfsr_tmp_16_and0001(lfsr_tmp_16_and00011:O)  | NONE(lfsr_tmp_16)      | 1     |
+lfsr_tmp_17_and0000(lfsr_tmp_17_and00001:O)  | NONE(lfsr_tmp_17)      | 1     |
+lfsr_tmp_17_and0001(lfsr_tmp_17_and00011:O)  | NONE(lfsr_tmp_17)      | 1     |
+lfsr_tmp_18_and0000(lfsr_tmp_18_and00001:O)  | NONE(lfsr_tmp_18)      | 1     |
+lfsr_tmp_18_and0001(lfsr_tmp_18_and00011:O)  | NONE(lfsr_tmp_18)      | 1     |
+lfsr_tmp_19_and0000(lfsr_tmp_19_and00001:O)  | NONE(lfsr_tmp_19)      | 1     |
+lfsr_tmp_19_and0001(lfsr_tmp_19_and00011:O)  | NONE(lfsr_tmp_19)      | 1     |
+lfsr_tmp_1_and0000(lfsr_tmp_1_and00001:O)    | NONE(lfsr_tmp_1)       | 1     |
+lfsr_tmp_1_and0001(lfsr_tmp_1_and00011:O)    | NONE(lfsr_tmp_1)       | 1     |
+lfsr_tmp_20_and0000(lfsr_tmp_20_and00001:O)  | NONE(lfsr_tmp_20)      | 1     |
+lfsr_tmp_20_and0001(lfsr_tmp_20_and00011:O)  | NONE(lfsr_tmp_20)      | 1     |
+lfsr_tmp_21_and0000(lfsr_tmp_21_and00001:O)  | NONE(lfsr_tmp_21)      | 1     |
+lfsr_tmp_21_and0001(lfsr_tmp_21_and00011:O)  | NONE(lfsr_tmp_21)      | 1     |
+lfsr_tmp_22_and0000(lfsr_tmp_22_and00001:O)  | NONE(lfsr_tmp_22)      | 1     |
+lfsr_tmp_22_and0001(lfsr_tmp_22_and00011:O)  | NONE(lfsr_tmp_22)      | 1     |
+lfsr_tmp_23_and0000(lfsr_tmp_23_and00001:O)  | NONE(lfsr_tmp_23)      | 1     |
+lfsr_tmp_23_and0001(lfsr_tmp_23_and00011:O)  | NONE(lfsr_tmp_23)      | 1     |
+lfsr_tmp_24_and0000(lfsr_tmp_24_and00001:O)  | NONE(lfsr_tmp_24)      | 1     |
+lfsr_tmp_24_and0001(lfsr_tmp_24_and00011:O)  | NONE(lfsr_tmp_24)      | 1     |
+lfsr_tmp_25_and0000(lfsr_tmp_25_and00001:O)  | NONE(lfsr_tmp_25)      | 1     |
+lfsr_tmp_25_and0001(lfsr_tmp_25_and00011:O)  | NONE(lfsr_tmp_25)      | 1     |
+lfsr_tmp_26_and0000(lfsr_tmp_26_and00001:O)  | NONE(lfsr_tmp_26)      | 1     |
+lfsr_tmp_26_and0001(lfsr_tmp_26_and00011:O)  | NONE(lfsr_tmp_26)      | 1     |
+lfsr_tmp_27_and0000(lfsr_tmp_27_and00001:O)  | NONE(lfsr_tmp_27)      | 1     |
+lfsr_tmp_27_and0001(lfsr_tmp_27_and00011:O)  | NONE(lfsr_tmp_27)      | 1     |
+lfsr_tmp_28_and0000(lfsr_tmp_28_and00001:O)  | NONE(lfsr_tmp_28)      | 1     |
+lfsr_tmp_28_and0001(lfsr_tmp_28_and00011:O)  | NONE(lfsr_tmp_28)      | 1     |
+lfsr_tmp_29_and0000(lfsr_tmp_29_and00001:O)  | NONE(lfsr_tmp_29)      | 1     |
+lfsr_tmp_29_and0001(lfsr_tmp_29_and00011:O)  | NONE(lfsr_tmp_29)      | 1     |
+lfsr_tmp_2_and0000(lfsr_tmp_2_and00001:O)    | NONE(lfsr_tmp_2)       | 1     |
+lfsr_tmp_2_and0001(lfsr_tmp_2_and00011:O)    | NONE(lfsr_tmp_2)       | 1     |
+lfsr_tmp_30_and0000(lfsr_tmp_30_and00001:O)  | NONE(lfsr_tmp_30)      | 1     |
+lfsr_tmp_30_and0001(lfsr_tmp_30_and00011:O)  | NONE(lfsr_tmp_30)      | 1     |
+lfsr_tmp_31_and0000(lfsr_tmp_31_and00001:O)  | NONE(lfsr_tmp_31)      | 1     |
+lfsr_tmp_31_and0001(lfsr_tmp_31_and00011:O)  | NONE(lfsr_tmp_31)      | 1     |
+lfsr_tmp_32_and0000(lfsr_tmp_32_and00001:O)  | NONE(lfsr_tmp_32)      | 1     |
+lfsr_tmp_32_and0001(lfsr_tmp_32_and00011:O)  | NONE(lfsr_tmp_32)      | 1     |
+lfsr_tmp_33_and0000(lfsr_tmp_33_and00001:O)  | NONE(lfsr_tmp_33)      | 1     |
+lfsr_tmp_33_and0001(lfsr_tmp_33_and00011:O)  | NONE(lfsr_tmp_33)      | 1     |
+lfsr_tmp_34_and0000(lfsr_tmp_34_and00001:O)  | NONE(lfsr_tmp_34)      | 1     |
+lfsr_tmp_34_and0001(lfsr_tmp_34_and00011:O)  | NONE(lfsr_tmp_34)      | 1     |
+lfsr_tmp_35_and0000(lfsr_tmp_35_and00001:O)  | NONE(lfsr_tmp_35)      | 1     |
+lfsr_tmp_35_and0001(lfsr_tmp_35_and00011:O)  | NONE(lfsr_tmp_35)      | 1     |
+lfsr_tmp_36_and0000(lfsr_tmp_36_and00001:O)  | NONE(lfsr_tmp_36)      | 1     |
+lfsr_tmp_36_and0001(lfsr_tmp_36_and00011:O)  | NONE(lfsr_tmp_36)      | 1     |
+lfsr_tmp_37_and0000(lfsr_tmp_37_and00001:O)  | NONE(lfsr_tmp_37)      | 1     |
+lfsr_tmp_37_and0001(lfsr_tmp_37_and00011:O)  | NONE(lfsr_tmp_37)      | 1     |
+lfsr_tmp_38_and0000(lfsr_tmp_38_and00001:O)  | NONE(lfsr_tmp_38)      | 1     |
+lfsr_tmp_38_and0001(lfsr_tmp_38_and00011:O)  | NONE(lfsr_tmp_38)      | 1     |
+lfsr_tmp_39_and0000(lfsr_tmp_39_and00001:O)  | NONE(lfsr_tmp_39)      | 1     |
+lfsr_tmp_39_and0001(lfsr_tmp_39_and00011:O)  | NONE(lfsr_tmp_39)      | 1     |
+lfsr_tmp_3_and0000(lfsr_tmp_3_and00001:O)    | NONE(lfsr_tmp_3)       | 1     |
+lfsr_tmp_3_and0001(lfsr_tmp_3_and00011:O)    | NONE(lfsr_tmp_3)       | 1     |
+lfsr_tmp_40_and0000(lfsr_tmp_40_and00001:O)  | NONE(lfsr_tmp_40)      | 1     |
+lfsr_tmp_40_and0001(lfsr_tmp_40_and00011:O)  | NONE(lfsr_tmp_40)      | 1     |
+lfsr_tmp_41_and0000(lfsr_tmp_41_and00001:O)  | NONE(lfsr_tmp_41)      | 1     |
+lfsr_tmp_41_and0001(lfsr_tmp_41_and00011:O)  | NONE(lfsr_tmp_41)      | 1     |
+lfsr_tmp_42_and0000(lfsr_tmp_42_and00001:O)  | NONE(lfsr_tmp_42)      | 1     |
+lfsr_tmp_42_and0001(lfsr_tmp_42_and00011:O)  | NONE(lfsr_tmp_42)      | 1     |
+lfsr_tmp_43_and0000(lfsr_tmp_43_and00001:O)  | NONE(lfsr_tmp_43)      | 1     |
+lfsr_tmp_43_and0001(lfsr_tmp_43_and00011:O)  | NONE(lfsr_tmp_43)      | 1     |
+lfsr_tmp_44_and0000(lfsr_tmp_44_and00001:O)  | NONE(lfsr_tmp_44)      | 1     |
+lfsr_tmp_44_and0001(lfsr_tmp_44_and00011:O)  | NONE(lfsr_tmp_44)      | 1     |
+lfsr_tmp_45_and0000(lfsr_tmp_45_and00001:O)  | NONE(lfsr_tmp_45)      | 1     |
+lfsr_tmp_45_and0001(lfsr_tmp_45_and00011:O)  | NONE(lfsr_tmp_45)      | 1     |
+lfsr_tmp_46_and0000(lfsr_tmp_46_and00001:O)  | NONE(lfsr_tmp_46)      | 1     |
+lfsr_tmp_46_and0001(lfsr_tmp_46_and00011:O)  | NONE(lfsr_tmp_46)      | 1     |
+lfsr_tmp_47_and0000(lfsr_tmp_47_and00001:O)  | NONE(lfsr_tmp_47)      | 1     |
+lfsr_tmp_47_and0001(lfsr_tmp_47_and00011:O)  | NONE(lfsr_tmp_47)      | 1     |
+lfsr_tmp_48_and0000(lfsr_tmp_48_and00001:O)  | NONE(lfsr_tmp_48)      | 1     |
+lfsr_tmp_48_and0001(lfsr_tmp_48_and00011:O)  | NONE(lfsr_tmp_48)      | 1     |
+lfsr_tmp_49_and0000(lfsr_tmp_49_and00001:O)  | NONE(lfsr_tmp_49)      | 1     |
+lfsr_tmp_49_and0001(lfsr_tmp_49_and00011:O)  | NONE(lfsr_tmp_49)      | 1     |
+lfsr_tmp_4_and0000(lfsr_tmp_4_and00001:O)    | NONE(lfsr_tmp_4)       | 1     |
+lfsr_tmp_4_and0001(lfsr_tmp_4_and00011:O)    | NONE(lfsr_tmp_4)       | 1     |
+lfsr_tmp_50_and0000(lfsr_tmp_50_and00001:O)  | NONE(lfsr_tmp_50)      | 1     |
+lfsr_tmp_50_and0001(lfsr_tmp_50_and00011:O)  | NONE(lfsr_tmp_50)      | 1     |
+lfsr_tmp_51_and0000(lfsr_tmp_51_and00001:O)  | NONE(lfsr_tmp_51)      | 1     |
+lfsr_tmp_51_and0001(lfsr_tmp_51_and00011:O)  | NONE(lfsr_tmp_51)      | 1     |
+lfsr_tmp_52_and0000(lfsr_tmp_52_and00001:O)  | NONE(lfsr_tmp_52)      | 1     |
+lfsr_tmp_52_and0001(lfsr_tmp_52_and00011:O)  | NONE(lfsr_tmp_52)      | 1     |
+lfsr_tmp_53_and0000(lfsr_tmp_53_and00001:O)  | NONE(lfsr_tmp_53)      | 1     |
+lfsr_tmp_53_and0001(lfsr_tmp_53_and00011:O)  | NONE(lfsr_tmp_53)      | 1     |
+lfsr_tmp_54_and0000(lfsr_tmp_54_and00001:O)  | NONE(lfsr_tmp_54)      | 1     |
+lfsr_tmp_54_and0001(lfsr_tmp_54_and00011:O)  | NONE(lfsr_tmp_54)      | 1     |
+lfsr_tmp_55_and0000(lfsr_tmp_55_and00001:O)  | NONE(lfsr_tmp_55)      | 1     |
+lfsr_tmp_55_and0001(lfsr_tmp_55_and00011:O)  | NONE(lfsr_tmp_55)      | 1     |
+lfsr_tmp_56_and0000(lfsr_tmp_56_and00001:O)  | NONE(lfsr_tmp_56)      | 1     |
+lfsr_tmp_56_and0001(lfsr_tmp_56_and00011:O)  | NONE(lfsr_tmp_56)      | 1     |
+lfsr_tmp_57_and0000(lfsr_tmp_57_and00001:O)  | NONE(lfsr_tmp_57)      | 1     |
+lfsr_tmp_57_and0001(lfsr_tmp_57_and00011:O)  | NONE(lfsr_tmp_57)      | 1     |
+lfsr_tmp_58_and0000(lfsr_tmp_58_and00001:O)  | NONE(lfsr_tmp_58)      | 1     |
+lfsr_tmp_58_and0001(lfsr_tmp_58_and00011:O)  | NONE(lfsr_tmp_58)      | 1     |
+lfsr_tmp_59_and0000(lfsr_tmp_59_and00001:O)  | NONE(lfsr_tmp_59)      | 1     |
+lfsr_tmp_59_and0001(lfsr_tmp_59_and00011:O)  | NONE(lfsr_tmp_59)      | 1     |
+lfsr_tmp_5_and0000(lfsr_tmp_5_and00001:O)    | NONE(lfsr_tmp_5)       | 1     |
+lfsr_tmp_5_and0001(lfsr_tmp_5_and00011:O)    | NONE(lfsr_tmp_5)       | 1     |
+lfsr_tmp_60_and0000(lfsr_tmp_60_and00001:O)  | NONE(lfsr_tmp_60)      | 1     |
+lfsr_tmp_60_and0001(lfsr_tmp_60_and00011:O)  | NONE(lfsr_tmp_60)      | 1     |
+lfsr_tmp_61_and0000(lfsr_tmp_61_and00001:O)  | NONE(lfsr_tmp_61)      | 1     |
+lfsr_tmp_61_and0001(lfsr_tmp_61_and00011:O)  | NONE(lfsr_tmp_61)      | 1     |
+lfsr_tmp_62_and0000(lfsr_tmp_62_and00001:O)  | NONE(lfsr_tmp_62)      | 1     |
+lfsr_tmp_62_and0001(lfsr_tmp_62_and00011:O)  | NONE(lfsr_tmp_62)      | 1     |
+lfsr_tmp_63_and0000(lfsr_tmp_63_and00001:O)  | NONE(lfsr_tmp_63)      | 1     |
+lfsr_tmp_63_and0001(lfsr_tmp_63_and00011:O)  | NONE(lfsr_tmp_63)      | 1     |
+lfsr_tmp_64_and0000(lfsr_tmp_64_and00001:O)  | NONE(lfsr_tmp_64)      | 1     |
+lfsr_tmp_64_and0001(lfsr_tmp_64_and00011:O)  | NONE(lfsr_tmp_64)      | 1     |
+lfsr_tmp_65_and0000(lfsr_tmp_65_and00001:O)  | NONE(lfsr_tmp_65)      | 1     |
+lfsr_tmp_65_and0001(lfsr_tmp_65_and00011:O)  | NONE(lfsr_tmp_65)      | 1     |
+lfsr_tmp_66_and0000(lfsr_tmp_66_and00001:O)  | NONE(lfsr_tmp_66)      | 1     |
+lfsr_tmp_66_and0001(lfsr_tmp_66_and00011:O)  | NONE(lfsr_tmp_66)      | 1     |
+lfsr_tmp_67_and0000(lfsr_tmp_67_and00001:O)  | NONE(lfsr_tmp_67)      | 1     |
+lfsr_tmp_67_and0001(lfsr_tmp_67_and00011:O)  | NONE(lfsr_tmp_67)      | 1     |
+lfsr_tmp_68_and0000(lfsr_tmp_68_and00001:O)  | NONE(lfsr_tmp_68)      | 1     |
+lfsr_tmp_68_and0001(lfsr_tmp_68_and00011:O)  | NONE(lfsr_tmp_68)      | 1     |
+lfsr_tmp_69_and0000(lfsr_tmp_69_and00001:O)  | NONE(lfsr_tmp_69)      | 1     |
+lfsr_tmp_69_and0001(lfsr_tmp_69_and00011:O)  | NONE(lfsr_tmp_69)      | 1     |
+lfsr_tmp_6_and0000(lfsr_tmp_6_and00001:O)    | NONE(lfsr_tmp_6)       | 1     |
+lfsr_tmp_6_and0001(lfsr_tmp_6_and00011:O)    | NONE(lfsr_tmp_6)       | 1     |
+lfsr_tmp_70_and0000(lfsr_tmp_70_and00001:O)  | NONE(lfsr_tmp_70)      | 1     |
+lfsr_tmp_70_and0001(lfsr_tmp_70_and00011:O)  | NONE(lfsr_tmp_70)      | 1     |
+lfsr_tmp_71_and0000(lfsr_tmp_71_and00001:O)  | NONE(lfsr_tmp_71)      | 1     |
+lfsr_tmp_71_and0001(lfsr_tmp_71_and00011:O)  | NONE(lfsr_tmp_71)      | 1     |
+lfsr_tmp_72_and0000(lfsr_tmp_72_and00001:O)  | NONE(lfsr_tmp_72)      | 1     |
+lfsr_tmp_72_and0001(lfsr_tmp_72_and00011:O)  | NONE(lfsr_tmp_72)      | 1     |
+lfsr_tmp_73_and0000(lfsr_tmp_73_and00001:O)  | NONE(lfsr_tmp_73)      | 1     |
+lfsr_tmp_73_and0001(lfsr_tmp_73_and00011:O)  | NONE(lfsr_tmp_73)      | 1     |
+lfsr_tmp_74_and0000(lfsr_tmp_74_and00001:O)  | NONE(lfsr_tmp_74)      | 1     |
+lfsr_tmp_74_and0001(lfsr_tmp_74_and00011:O)  | NONE(lfsr_tmp_74)      | 1     |
+lfsr_tmp_75_and0000(lfsr_tmp_75_and00001:O)  | NONE(lfsr_tmp_75)      | 1     |
+lfsr_tmp_75_and0001(lfsr_tmp_75_and00011:O)  | NONE(lfsr_tmp_75)      | 1     |
+lfsr_tmp_76_and0000(lfsr_tmp_76_and00001:O)  | NONE(lfsr_tmp_76)      | 1     |
+lfsr_tmp_76_and0001(lfsr_tmp_76_and00011:O)  | NONE(lfsr_tmp_76)      | 1     |
+lfsr_tmp_77_and0000(lfsr_tmp_77_and00001:O)  | NONE(lfsr_tmp_77)      | 1     |
+lfsr_tmp_77_and0001(lfsr_tmp_77_and00011:O)  | NONE(lfsr_tmp_77)      | 1     |
+lfsr_tmp_78_and0000(lfsr_tmp_78_and00001:O)  | NONE(lfsr_tmp_78)      | 1     |
+lfsr_tmp_78_and0001(lfsr_tmp_78_and00011:O)  | NONE(lfsr_tmp_78)      | 1     |
+lfsr_tmp_79_and0000(lfsr_tmp_79_and00001:O)  | NONE(lfsr_tmp_79)      | 1     |
+lfsr_tmp_79_and0001(lfsr_tmp_79_and00011:O)  | NONE(lfsr_tmp_79)      | 1     |
+lfsr_tmp_7_and0000(lfsr_tmp_7_and00001:O)    | NONE(lfsr_tmp_7)       | 1     |
+lfsr_tmp_7_and0001(lfsr_tmp_7_and00011:O)    | NONE(lfsr_tmp_7)       | 1     |
+lfsr_tmp_80_and0000(lfsr_tmp_80_and00001:O)  | NONE(lfsr_tmp_80)      | 1     |
+lfsr_tmp_80_and0001(lfsr_tmp_80_and00011:O)  | NONE(lfsr_tmp_80)      | 1     |
+lfsr_tmp_81_and0000(lfsr_tmp_81_and00001:O)  | NONE(lfsr_tmp_81)      | 1     |
+lfsr_tmp_81_and0001(lfsr_tmp_81_and00011:O)  | NONE(lfsr_tmp_81)      | 1     |
+lfsr_tmp_82_and0000(lfsr_tmp_82_and00001:O)  | NONE(lfsr_tmp_82)      | 1     |
+lfsr_tmp_82_and0001(lfsr_tmp_82_and00011:O)  | NONE(lfsr_tmp_82)      | 1     |
+lfsr_tmp_83_and0000(lfsr_tmp_83_and00001:O)  | NONE(lfsr_tmp_83)      | 1     |
+lfsr_tmp_83_and0001(lfsr_tmp_83_and00011:O)  | NONE(lfsr_tmp_83)      | 1     |
+lfsr_tmp_84_and0000(lfsr_tmp_84_and00001:O)  | NONE(lfsr_tmp_84)      | 1     |
+lfsr_tmp_84_and0001(lfsr_tmp_84_and00011:O)  | NONE(lfsr_tmp_84)      | 1     |
+lfsr_tmp_85_and0000(lfsr_tmp_85_and00001:O)  | NONE(lfsr_tmp_85)      | 1     |
+lfsr_tmp_85_and0001(lfsr_tmp_85_and00011:O)  | NONE(lfsr_tmp_85)      | 1     |
+lfsr_tmp_86_and0000(lfsr_tmp_86_and00001:O)  | NONE(lfsr_tmp_86)      | 1     |
+lfsr_tmp_86_and0001(lfsr_tmp_86_and00011:O)  | NONE(lfsr_tmp_86)      | 1     |
+lfsr_tmp_87_and0000(lfsr_tmp_87_and00001:O)  | NONE(lfsr_tmp_87)      | 1     |
+lfsr_tmp_87_and0001(lfsr_tmp_87_and00011:O)  | NONE(lfsr_tmp_87)      | 1     |
+lfsr_tmp_88_and0000(lfsr_tmp_88_and00001:O)  | NONE(lfsr_tmp_88)      | 1     |
+lfsr_tmp_88_and0001(lfsr_tmp_88_and00011:O)  | NONE(lfsr_tmp_88)      | 1     |
+lfsr_tmp_89_and0000(lfsr_tmp_89_and00001:O)  | NONE(lfsr_tmp_89)      | 1     |
+lfsr_tmp_89_and0001(lfsr_tmp_89_and00011:O)  | NONE(lfsr_tmp_89)      | 1     |
+lfsr_tmp_8_and0000(lfsr_tmp_8_and00001:O)    | NONE(lfsr_tmp_8)       | 1     |
+lfsr_tmp_8_and0001(lfsr_tmp_8_and00011:O)    | NONE(lfsr_tmp_8)       | 1     |
+lfsr_tmp_90_and0000(lfsr_tmp_90_and00001:O)  | NONE(lfsr_tmp_90)      | 1     |
+lfsr_tmp_90_and0001(lfsr_tmp_90_and00011:O)  | NONE(lfsr_tmp_90)      | 1     |
+lfsr_tmp_91_and0000(lfsr_tmp_91_and00001:O)  | NONE(lfsr_tmp_91)      | 1     |
+lfsr_tmp_91_and0001(lfsr_tmp_91_and00011:O)  | NONE(lfsr_tmp_91)      | 1     |
+lfsr_tmp_92_and0000(lfsr_tmp_92_and00001:O)  | NONE(lfsr_tmp_92)      | 1     |
+lfsr_tmp_92_and0001(lfsr_tmp_92_and00011:O)  | NONE(lfsr_tmp_92)      | 1     |
+lfsr_tmp_93_and0000(lfsr_tmp_93_and00001:O)  | NONE(lfsr_tmp_93)      | 1     |
+lfsr_tmp_93_and0001(lfsr_tmp_93_and00011:O)  | NONE(lfsr_tmp_93)      | 1     |
+lfsr_tmp_94_and0000(lfsr_tmp_94_and00001:O)  | NONE(lfsr_tmp_94)      | 1     |
+lfsr_tmp_94_and0001(lfsr_tmp_94_and00011:O)  | NONE(lfsr_tmp_94)      | 1     |
+lfsr_tmp_95_and0000(lfsr_tmp_95_and00001:O)  | NONE(lfsr_tmp_95)      | 1     |
+lfsr_tmp_95_and0001(lfsr_tmp_95_and00011:O)  | NONE(lfsr_tmp_95)      | 1     |
+lfsr_tmp_96_and0000(lfsr_tmp_96_and00001:O)  | NONE(lfsr_tmp_96)      | 1     |
+lfsr_tmp_96_and0001(lfsr_tmp_96_and00011:O)  | NONE(lfsr_tmp_96)      | 1     |
+lfsr_tmp_97_and0000(lfsr_tmp_97_and00001:O)  | NONE(lfsr_tmp_97)      | 1     |
+lfsr_tmp_97_and0001(lfsr_tmp_97_and00011:O)  | NONE(lfsr_tmp_97)      | 1     |
+lfsr_tmp_98_and0000(lfsr_tmp_98_and00001:O)  | NONE(lfsr_tmp_98)      | 1     |
+lfsr_tmp_98_and0001(lfsr_tmp_98_and00011:O)  | NONE(lfsr_tmp_98)      | 1     |
+lfsr_tmp_99_and0000(lfsr_tmp_99_and00001:O)  | NONE(lfsr_tmp_99)      | 1     |
+lfsr_tmp_99_and0001(lfsr_tmp_99_and00011:O)  | NONE(lfsr_tmp_99)      | 1     |
+lfsr_tmp_9_and0000(lfsr_tmp_9_and00001:O)    | NONE(lfsr_tmp_9)       | 1     |
+lfsr_tmp_9_and0001(lfsr_tmp_9_and00011:O)    | NONE(lfsr_tmp_9)       | 1     |
+---------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 2.225ns (Maximum Frequency: 449.438MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.225ns (frequency: 449.438MHz)
+  Total number of paths / destination ports: 129 / 127
+-------------------------------------------------------------------------
+Delay:               2.225ns (Levels of Logic = 1)
+  Source:            lfsr_tmp_126 (FF)
+  Destination:       lfsr_tmp_125 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: lfsr_tmp_126 to lfsr_tmp_125
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q             2   0.591   0.622  lfsr_tmp_126 (lfsr_tmp_126)
+     LUT2:I0->O            1   0.704   0.000  Mxor_lfsr_tmp_xor0001_Result1 (lfsr_tmp_xor0001)
+     FDCP:D                    0.308          lfsr_tmp_125
+    ----------------------------------------
+    Total                      2.225ns (1.603ns logic, 0.622ns route)
+                                       (72.0% logic, 28.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 128 / 128
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            lfsr_tmp_0 (FF)
+  Destination:       lfsr_out<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: lfsr_tmp_0 to lfsr_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCP:C->Q             3   0.591   0.531  lfsr_tmp_0 (lfsr_tmp_0)
+     OBUF:I->O                 3.272          lfsr_out_0_OBUF (lfsr_out<0>)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 33.00 secs
+Total CPU time to Xst completion: 32.86 secs
+ 
+--> 
+
+
+Total memory usage is 517680 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

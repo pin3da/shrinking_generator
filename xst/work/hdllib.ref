@@ -1,4 +1,12 @@
+EN lfsr_127 NULL /home/pin3da/Repos/shrinking_generator/lfsr_127.vhd sub00/vhpl06 1355462540
+EN lfsr_128 NULL /home/pin3da/Repos/shrinking_generator/lfsr_128.vhd sub00/vhpl04 1355461600
+AR lfsr_127 arhc_lfsr_127 /home/pin3da/Repos/shrinking_generator/lfsr_127.vhd sub00/vhpl07 1355462541
 AR lfsr arhc_lfsr /home/pin3da/Repos/shrinking_generator/lfsr.vhd sub00/vhpl01 1355459863
+AR lfsr_128 arhc_lfsr /home/pin3da/Repos/shrinking_generator/lfsr_128.vhd sub00/vhpl05 1355461601
+EN encode_ram NULL /home/pin3da/Repos/shrinking_generator/Encode_ram.vhd sub00/vhpl10 1355469259
+AR prng arch_prng /home/pin3da/Repos/shrinking_generator/Prng.vhd sub00/vhpl09 1355466469
+AR encode_ram arch_en_ram /home/pin3da/Repos/shrinking_generator/Encode_ram.vhd sub00/vhpl11 1355469260
 AR ram arch_ram /home/pin3da/Repos/shrinking_generator/ram.vhd sub00/vhpl03 1354767716
+EN prng NULL /home/pin3da/Repos/shrinking_generator/Prng.vhd sub00/vhpl08 1355466468
 EN lfsr NULL /home/pin3da/Repos/shrinking_generator/lfsr.vhd sub00/vhpl00 1355459862
 EN ram NULL /home/pin3da/Repos/shrinking_generator/ram.vhd sub00/vhpl02 1354767715

@@ -1,0 +1,1 @@
+vhdtdtfi -prj shrinking_generator -o /home/pin3da/Repos/shrinking_generator/modulotx.vhi -module modulotx -template /home/pin3da/mybin/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work modulotx.vhd 

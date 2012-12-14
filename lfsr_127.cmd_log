@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/pin3da/Repos/shrinking_generator/lfsr_127.xst" -ofn "/home/pin3da/Repos/shrinking_generator/lfsr_127.syr" 
+vhdtdtfi -prj shrinking_generator -o /home/pin3da/Repos/shrinking_generator/lfsr_127.vhi -module lfsr_127 -template /home/pin3da/mybin/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work lfsr_127.vhd 
