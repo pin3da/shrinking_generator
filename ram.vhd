@@ -26,7 +26,6 @@ entity ram is
     port (clk : in std_logic;
           we   : in std_logic;
           en   : in std_logic;
-          addr : in std_logic_vector(3 downto 0);
           di   : in std_logic_vector(127 downto 0);
           do   : out std_logic_vector(127 downto 0));
 end ram;
@@ -38,9 +37,9 @@ begin
          if clk'event and clk = '1' then
              if en = '1' then
                  if we = '1' then
-                     RAM(conv_integer(addr)) <= di;
+                     RAM <= di;
                  end if;
-                 do <= RAM(conv_integer(addr)) ;
+                 do <= RAM;
              end if;
          end if;
     end process;

@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/pin3da/Repos/shrinking_generator/tb_tx_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/pin3da/Repos/shrinking_generator/tb_tx_isim_beh.wdb 
+Running: /home/pin3da/Repos/shrinking_generator/tb_decode_ram_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/pin3da/Repos/shrinking_generator/tb_decode_ram_isim_beh.wdb 
 ISim P.28xd (signature 0x54af6ca1)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.

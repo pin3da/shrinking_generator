@@ -53,7 +53,6 @@ COMPONENT ram
 		clk : IN std_logic;
 		we : IN std_logic;
 		en : IN std_logic;
-		addr : IN std_logic_vector(3 downto 0);
 		di : IN std_logic_vector(127 downto 0);          
 		do : OUT std_logic_vector(127 downto 0)
 		);
@@ -80,6 +79,23 @@ COMPONENT modulotx
 		serialOut : OUT std_logic
 		);
 	END COMPONENT;
+   
+COMPONENT decode_ram
+	PORT(
+		current_block : IN std_logic_vector(3 downto 0);
+		ram_data : IN std_logic_vector(127 downto 0);          
+		out_data_rx : OUT std_logic_vector(7 downto 0)
+		);
+	END COMPONENT;
+   
+COMPONENT Encode_ram
+	PORT(
+		status_ram : IN std_logic_vector(127 downto 0);
+		current_data : IN std_logic_vector(7 downto 0);
+		current_block : IN std_logic_vector(3 downto 0);          
+		out_ram : OUT std_logic_vector(127 downto 0)
+		);
+	END COMPONENT;
 
 begin
 
@@ -101,7 +117,6 @@ begin
 		clk => ,
 		we => ,
 		en => ,
-		addr => ,
 		di => ,
 		do => 
 	);
@@ -110,7 +125,6 @@ begin
 		clk => ,
 		we => ,
 		en => ,
-		addr => ,
 		di => ,
 		do => 
 	);

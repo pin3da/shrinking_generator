@@ -2,15 +2,15 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   02:16:02 12/14/2012
+-- Create Date:   02:44:55 12/14/2012
 -- Design Name:   
--- Module Name:   /home/pin3da/Repos/shrinking_generator/tb_encode_ram.vhd
+-- Module Name:   /home/pin3da/Repos/shrinking_generator/tb_decode_ram.vhd
 -- Project Name:  shrinking_generator
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: Encode_ram
+-- VHDL Test Bench Created by ISE for module: decode_ram
 -- 
 -- Dependencies:
 -- 
@@ -32,54 +32,52 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY tb_encode_ram IS
-END tb_encode_ram;
+ENTITY tb_decode_ram IS
+END tb_decode_ram;
  
-ARCHITECTURE behavior OF tb_encode_ram IS 
+ARCHITECTURE behavior OF tb_decode_ram IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT Encode_ram
+    COMPONENT decode_ram
     PORT(
-         status_ram : IN  std_logic_vector(127 downto 0);
-         current_data : IN  std_logic_vector(7 downto 0);
          current_block : IN  std_logic_vector(3 downto 0);
-         out_ram : OUT  std_logic_vector(127 downto 0)
+         ram_data : IN  std_logic_vector(127 downto 0);
+         out_data_rx : OUT  std_logic_vector(7 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
-   signal status_ram : std_logic_vector(127 downto 0) := (others => '0');
-   signal current_data : std_logic_vector(7 downto 0) := (others => '0');
    signal current_block : std_logic_vector(3 downto 0) := (others => '0');
+   signal ram_data : std_logic_vector(127 downto 0) := (others => '0');
 
  	--Outputs
-   signal out_ram : std_logic_vector(127 downto 0);
+   signal out_data_rx : std_logic_vector(7 downto 0);
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
-   
+  
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: Encode_ram PORT MAP (
-          status_ram => status_ram,
-          current_data => current_data,
+   uut: decode_ram PORT MAP (
           current_block => current_block,
-          out_ram => out_ram
+          ram_data => ram_data,
+          out_data_rx => out_data_rx
         );
 
-    -- Stimulus process
+  
+   -- Stimulus process
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
       wait for 100 ns;	
+      current_block<=X"F";
+      ram_data<=X"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFAF";
 
-      status_ram <= X"00000000000000000000000000000000";
-      current_data <= X"FF";
-      current_block <= X"2";
+  
 
       -- insert stimulus here 
 

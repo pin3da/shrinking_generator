@@ -1,0 +1,2 @@
+vhdl work "decode_ram.vhd"
+vhdl work "tb_decode_ram.vhd"
