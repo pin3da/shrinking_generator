@@ -3,19 +3,17 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity Encode_ram is
-    Port ( status_ram : in  STD_LOGIC_VECTOR (127 downto 0);
-           current_data : in  STD_LOGIC_VECTOR (7 downto 0);
+    Port ( current_data : in  STD_LOGIC_VECTOR (7 downto 0);
            current_block : in  STD_LOGIC_VECTOR (3 downto 0);
            out_ram : out  STD_LOGIC_VECTOR (127 downto 0));
 end Encode_ram;
 
 architecture arch_en_ram of Encode_ram is
 
-signal tmp : std_logic_vector(127 downto 0);
+signal tmp : std_logic_vector(127 downto 0) := (others => '1');
 
 begin
-   process(status_ram,current_data,current_block) begin
-      tmp<=status_ram;
+   process(current_data,current_block) begin
       case current_block is
          when X"0" => tmp(127 downto 120)<=current_data;
          when X"1" => tmp(119 downto 112)<=current_data;

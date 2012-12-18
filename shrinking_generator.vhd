@@ -35,22 +35,24 @@ end shrinking_generator;
 architecture arch_shrinking_generator of shrinking_generator is
 
 signal counter : integer range 0 to 127;
+signal tmp: std_logic_vector (127 downto 0) := (others => '0');
 
 begin 
-   process(reset,lfsr1,lfsr2,ram_state,counter) begin
+   process(reset,lfsr1,lfsr2,ram_state) begin
       if(reset = '1')then
          counter <= 0;
          fill_ok <= '0';
+		 tmp <= (others => '0');
       else
-         to_ram <= ram_state;
+         tmp <= ram_state;
          if(counter = 127)then
             fill_ok <= '1';
          elsif(lfsr2 = '1')then
-            to_ram(counter)<= lfsr1;
+            tmp(counter)<= lfsr1;
             counter <= counter +1;
          end if;
       end if;
    end process;
-
+   to_ram<=tmp;
 end arch_shrinking_generator;
 

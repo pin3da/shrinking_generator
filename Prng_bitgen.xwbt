@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/pin3da/Repos/shrinking_generator/Prng.ncd
+OUTFILE=/home/pin3da/Repos/shrinking_generator/Prng.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/home/pin3da/Repos/shrinking_generator
+LICENSE=WebPack
+USER_INFO=210663758_0_0_279

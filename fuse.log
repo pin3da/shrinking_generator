@@ -1,21 +1,45 @@
-Running: /home/pin3da/mybin/14.2/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/pin3da/Repos/shrinking_generator/tb_decode_ram_isim_beh.exe -prj /home/pin3da/Repos/shrinking_generator/tb_decode_ram_beh.prj work.tb_decode_ram 
+Running: /home/pin3da/mybin/14.2/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/pin3da/Repos/shrinking_generator/tb_prng_isim_beh.exe -prj /home/pin3da/Repos/shrinking_generator/tb_prng_beh.prj work.tb_prng 
 ISim P.28xd (signature 0x54af6ca1)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/shrinking_generator.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/ram.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/modulotx.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/modulorx.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/lfsr_128.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/lfsr_127.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/Encode_ram.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/div_115200.vhd" into library work
 Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/decode_ram.vhd" into library work
-Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/tb_decode_ram.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/Control.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/Prng.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/tb_prng.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 94032 KB
-Fuse CPU Usage: 2780 ms
+Fuse Memory Usage: 97296 KB
+Fuse CPU Usage: 2920 ms
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture arhc_lfsr_127 of entity lfsr_127 [\lfsr_127(127)\]
+Compiling architecture arhc_lfsr of entity lfsr_128 [\lfsr_128(128)\]
+Compiling architecture arch_ram of entity ram [ram_default]
+Compiling architecture behavioral of entity modulorx [modulorx_default]
+Compiling architecture arqmodulotx of entity modulotx [modulotx_default]
+Compiling architecture arch_en_ram of entity Encode_ram [encode_ram_default]
 Compiling architecture arch_decode_ram of entity decode_ram [decode_ram_default]
-Compiling architecture behavior of entity tb_decode_ram
+Compiling architecture arch_11520 of entity div_115200 [div_115200_default]
+Compiling architecture arch_control of entity Control [control_default]
+Compiling architecture arch_shrinking_generator of entity shrinking_generator [shrinking_generator_default]
+Compiling architecture arch_prng of entity Prng [prng_default]
+Compiling architecture behavior of entity tb_prng
 Time Resolution for simulation is 1ps.
-Compiled 5 VHDL Units
-Built simulation executable /home/pin3da/Repos/shrinking_generator/tb_decode_ram_isim_beh.exe
-Fuse Memory Usage: 201008 KB
-Fuse CPU Usage: 2840 ms
-GCC CPU Usage: 490 ms
+Waiting for 13 sub-compilation(s) to finish...
+Compiled 28 VHDL Units
+Built simulation executable /home/pin3da/Repos/shrinking_generator/tb_prng_isim_beh.exe
+Fuse Memory Usage: 212964 KB
+Fuse CPU Usage: 3280 ms
+GCC CPU Usage: 8810 ms

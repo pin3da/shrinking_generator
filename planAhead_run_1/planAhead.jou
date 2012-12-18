@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:49:25 MDT 2012
+# Start of session at: Mon Dec 17 23:35:50 2012
+# Process ID: 10590
+# Log file: /home/pin3da/Repos/shrinking_generator/planAhead_run_1/planAhead.log
+# Journal file: /home/pin3da/Repos/shrinking_generator/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/pin3da/Repos/shrinking_generator/pa.fromHdl.tcl
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports reset]
+endgroup
+startgroup
+set_property package_pin R7 [get_ports serial_in]
+endgroup
+startgroup
+set_property package_pin M14 [get_ports serial_out]
+endgroup
+set_property is_loc_fixed false [get_ports [list  serial_out]]
+save_design

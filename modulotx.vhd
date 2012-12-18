@@ -14,11 +14,11 @@
  -- |                                                   |
  -- +-IO Description------------------------------------+
  -- |                                                   |
- -- | + enable115200       : IN - Clock		           |
+ -- | + enable115200       : IN - Clock		            |
  -- | + reset              : IN - Reset (Active High)   |
  -- | + enableTrans        : IN - Ready for transmit    |
  -- | + data               : IN - Parallel data to send |
- -- | + serialOut          : OUT - Serial data sent	  |
+ -- | + serialOut          : OUT - Serial data sent	    |
  -- | + transOk            : OUT - transmission over ok |
  -- +---------------------------------------------------+
 library IEEE;

@@ -1,0 +1,112 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:49:25 MDT 2012
+# Start of session at: Mon Dec 17 23:35:50 2012
+# Process ID: 10590
+# Log file: /home/pin3da/Repos/shrinking_generator/planAhead_run_1/planAhead.log
+# Journal file: /home/pin3da/Repos/shrinking_generator/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/pin3da/Repos/shrinking_generator/pa.fromHdl.tcl
+# create_project -name shrinking_generator -dir "/home/pin3da/Repos/shrinking_generator/planAhead_run_1" -part xc3s500efg320-4
+Parsing template File [/home/pin3da/mybin/14.2/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Finished parsing template File [/home/pin3da/mybin/14.2/ISE_DS/ISE/data/projnav/templates/verilog.xml].
+Parsing template File [/home/pin3da/mybin/14.2/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Finished parsing template File [/home/pin3da/mybin/14.2/ISE_DS/ISE/data/projnav/templates/vhdl.xml].
+Parsing template File [/home/pin3da/mybin/14.2/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+Finished parsing template File [/home/pin3da/mybin/14.2/ISE_DS/ISE/data/projnav/templates/ucf.xml].
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2624.824 ; gain = 34.180
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "Prng.ucf" [current_fileset -constrset]
+Adding file '/home/pin3da/Repos/shrinking_generator/Prng.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {shrinking_generator.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ram.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {modulotx.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {modulorx.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {lfsr_128.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {lfsr_127.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Encode_ram.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {div_115200.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {decode_ram.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Control.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Prng.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top Prng $srcset
+# add_files [list {Prng.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s500efg320-4
+Using Verific elaboration
+Parsing VHDL file "/home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/shrinking_generator.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/ram.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/modulotx.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/modulorx.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/lfsr_128.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/lfsr_127.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/Encode_ram.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/div_115200.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/decode_ram.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/Control.vhd" into library work
+Parsing VHDL file "/home/pin3da/Repos/shrinking_generator/Prng.vhd" into library work
+INFO: [Designutils 20-910] Reading macro library /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [/home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [/home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockRegion.xml
+Loading clock buffers from /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockBuffers.xml
+Loading package from /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/Package.xml
+Loading io standards from /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/SSORules.xml
+Loading list of drcs for the architecture : /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library /home/pin3da/mybin/14.2/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [/home/pin3da/Repos/shrinking_generator/Prng.ucf]
+Finished Parsing UCF File [/home/pin3da/Repos/shrinking_generator/Prng.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 51715e24
+open_rtl_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2741.746 ; gain = 110.914
+startgroup
+set_property package_pin C9 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports reset]
+endgroup
+startgroup
+set_property package_pin R7 [get_ports serial_in]
+endgroup
+startgroup
+set_property package_pin M14 [get_ports serial_out]
+endgroup
+set_property is_loc_fixed false [get_ports [list  serial_out]]
+save_design
+exit
+INFO: [Common 17-206] Exiting PlanAhead...
+INFO: [Common 17-83] Releasing license: PlanAhead

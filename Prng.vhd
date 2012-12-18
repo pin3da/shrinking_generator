@@ -62,7 +62,7 @@ COMPONENT ram
 COMPONENT modulorx
 	PORT(
 		reset : IN std_logic;
-		clk_115200 : IN std_logic;
+		enable115200 : IN std_logic;
 		enableRecep : IN std_logic;
 		serialIn : IN std_logic;          
 		recepOk : OUT std_logic;
@@ -91,7 +91,6 @@ COMPONENT decode_ram
    
 COMPONENT Encode_ram
 	PORT(
-		status_ram : IN std_logic_vector(127 downto 0);
 		current_data : IN std_logic_vector(7 downto 0);
 		current_block : IN std_logic_vector(3 downto 0);          
 		out_ram : OUT std_logic_vector(127 downto 0)
@@ -116,8 +115,6 @@ COMPONENT Control
 		trans_ok : IN std_logic;          
 		enable_rec : OUT std_logic;
 		current_block_encode : OUT std_logic_vector(3 downto 0);
-		we_ram_rec : OUT std_logic;
-		en_ram_rec : OUT std_logic;
 		we_ram_trans : OUT std_logic;
 		en_ram_trans : OUT std_logic;
 		reset_lfsr1 : OUT std_logic;
@@ -143,13 +140,10 @@ COMPONENT shrinking_generator
 
 -- Internal signals 
 
-signal ram_to_lfsr       : std_logic_vector (127 downto 0);
 signal cu_reset_lfsr1     : std_logic; 
 signal lfsr1_to_sg        : std_logic;
 signal cu_reset_lfsr2     : std_logic; 
 signal lfsr2_to_sg        : std_logic;
-signal cu_rec_we          : std_logic;
-signal cu_rec_en          : std_logic;
 signal cu_trans_we        : std_logic;
 signal cu_trans_en        : std_logic;
 signal encoder_to_ram     : std_logic_vector (127 downto 0);
@@ -175,25 +169,17 @@ signal cu_reset_sg        : std_logic;
 begin
 
 	Inst_lfsr_127: lfsr_127 PORT MAP(
-		lfsr_in => ram_to_lfsr(126 downto 0),
+		lfsr_in => encoder_to_ram(126 downto 0),
 		clk => clk,
 		reset => cu_reset_lfsr2,
 		lfsr_out => lfsr2_to_sg
 	);
    
    Inst_lfsr_128: lfsr_128 PORT MAP(
-		lfsr_in => ram_to_lfsr,
+		lfsr_in => encoder_to_ram,
 		clk => clk,
 		reset => cu_reset_lfsr1,
 		lfsr_out => lfsr1_to_sg
-	);
-   
-   Inst_ram_receiver: ram PORT MAP(
-		clk => clk,
-		we => cu_rec_we,
-		en => cu_rec_en,
-		di => encoder_to_ram,
-		do => ram_to_lfsr
 	);
    
    Inst_ram_trans: ram PORT MAP(
@@ -206,7 +192,7 @@ begin
    
   	Inst_modulorx: modulorx PORT MAP(
 		reset => cu_reset_rx,
-		clk_115200 => clk_115200,
+		enable115200 => clk_115200,
 		enableRecep => cu_enable_rx,
 		serialIn => serial_in,
 		recepOk => rx_recepok_cu,
@@ -223,7 +209,6 @@ begin
 	);
    
    Inst_Encode_ram: Encode_ram PORT MAP(
-		status_ram => ram_to_lfsr,
 		current_data => rx_to_encode,
 		current_block => cu_current_encode,
 		out_ram => encoder_to_ram
@@ -250,9 +235,7 @@ begin
 		fill_ok => sg_fillok_cu,
 		trans_ok => tx_transok_cu,
 		enable_rec => cu_enable_rx,
-		current_block_encode => cu_current_encode ,
-		we_ram_rec => cu_rec_we,
-		en_ram_rec => cu_rec_en,
+		current_block_encode => cu_current_encode,
 		we_ram_trans => cu_trans_we,
 		en_ram_trans => cu_trans_en,
 		reset_lfsr1 => cu_reset_lfsr1,
