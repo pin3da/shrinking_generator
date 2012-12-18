@@ -12,7 +12,7 @@
  -- | + Store bits until fill the transmition ram       |
  -- | + Information and references in documentation.    | 
  -- +-IO Description------------------------------------+
- -- | + reset      : IN - Defines a initial state       |
+ -- | + reset      : IN - Defines an initial state      |
  -- | + lfsr1      : IN - Data from lfsr1 (128 bits)    |
  -- | + lfsr2      : IN - Data from lfsr1 (127 bits)    |
  -- | + ram_state  : IN - Current state of ram          |

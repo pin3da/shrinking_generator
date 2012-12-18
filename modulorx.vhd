@@ -1,25 +1,28 @@
 -- +-Module--------------------------------------------+
- -- |                   RECEPTION CORE                  |
- -- +-Author--------------------------------------------+
+-- |                   RECEPTION CORE                  |
+-- +-Author--------------------------------------------+
  -- |                                                   |
- -- | +                                                 |
- -- | + Email :                                         |
- -- | + Website :                                       |
+ -- | + Manuel Pineda                                   |
+ -- | + Website : github.com/pin3da                     |
+ -- | + Email : manuel.felipe.pineda@gmail.com          |
+ -- | + Carlos González                                 |
+ -- | + Website : github.com/caal-15                    |
+ -- | + Email : caal.0522@gmail.com                     |
  -- |                                                   |
  -- +-Information---------------------------------------+
  -- |                                                   |
- -- | + Module of reception of rs232                    |
+ -- | + Reception module for RS232                      |
  -- |                                                   |
  -- |                                                   |
  -- |                                                   |
  -- +-IO Description------------------------------------+
  -- |                                                   |
- -- | + enable115200       : IN - Clock		            |
- -- | + reset              : IN - Reset (Active High)   |
- -- | + enableRecep        : IN - Ready for receive     |
- -- | + serialIn           : IN - serial data to receive|
- -- | + rxOut              : OUT - Parallel data received|
- -- | + receOk             : OUT - reception over ok    |
+ -- | + enable115200      : IN - Clock		              |
+ -- | + reset             : IN - Reset (Active High)    |
+ -- | + enableRecep       : IN - Ready to receive       |
+ -- | + serialIn          : IN - serial data to receive |
+ -- | + rxOut             : OUT - Parallel data received|
+ -- | + receOk            : OUT - reception successful  |
  -- +---------------------------------------------------+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

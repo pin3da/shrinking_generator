@@ -1,3 +1,24 @@
+ -- +-Module--------------------------------------------+
+ -- |                   FREQUENCY DIVIDER               |
+ -- +-Author--------------------------------------------+
+ -- |                                                   |
+ -- | + Manuel Pineda                                   |
+ -- | + Website : github.com/pin3da                     |
+ -- | + Email : manuel.felipe.pineda@gmail.com          |
+ -- | + Carlos González                                 |
+ -- | + Website : github.com/caal-15                    |
+ -- | + Email : caal.0522@gmail.com                     |
+ -- |                                                   |
+ -- +-Information---------------------------------------+
+ -- |                                                   |
+ -- | + Frequency Divider to 115200 HZ                  |
+ -- |                                                   |
+ -- +-IO Description------------------------------------+
+ -- |                                                   |
+ -- | + clkfpga      : IN - 50MHz Clock                 |
+ -- | + reset        : IN - Reset (Active High)         |
+ -- | + enable115200 : OUT - clock divided to 115200    |
+ -- +---------------------------------------------------+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 

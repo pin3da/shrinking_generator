@@ -3,12 +3,15 @@
  -- +-Author--------------------------------------------+
  -- |                                                   |
  -- | + Manuel Pineda                                   |
- -- | + Email : manuel.felipe.pineda@gmail.com          |
  -- | + Website : github.com/pin3da                     |
+ -- | + Email : manuel.felipe.pineda@gmail.com          |
+ -- | + Carlos González                                 |
+ -- | + Website : github.com/caal-15                    |
+ -- | + Email : caal.0522@gmail.com                     |
  -- |                                                   |
  -- +-Information---------------------------------------+
  -- |                                                   |
- -- | + Pseudorandom number generator bassed on         |
+ -- | + Pseudorandom number generator based on a        |
  -- |   shrinking generator                             |
  -- | + Provides the necessary control to generate      |
  -- |   pseudorandom numbers, and send them through     |
@@ -163,7 +166,7 @@ signal cu_current_decode  : std_logic_vector (3 downto 0);
 signal sg_fillok_cu       : std_logic;
 signal cu_reset_sg        : std_logic;
 
--- Intergal signals
+-- Internal signals
 
 begin
     

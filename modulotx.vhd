@@ -2,24 +2,27 @@
  -- |                   TRANSMISSION CORE               |
  -- +-Author--------------------------------------------+
  -- |                                                   |
- -- | +                                                 |
- -- | + Email :                                         |
- -- | + Website :                                       |
+ -- | + Manuel Pineda                                   |
+ -- | + Website : github.com/pin3da                     |
+ -- | + Email : manuel.felipe.pineda@gmail.com          |
+ -- | + Carlos González                                 |
+ -- | + Website : github.com/caal-15                    |
+ -- | + Email : caal.0522@gmail.com                     |
  -- |                                                   |
  -- +-Information---------------------------------------+
  -- |                                                   |
- -- | + Module of transmission of rs232                 |
+ -- | + Transmission module for RS232                   |
  -- |                                                   |
  -- |                                                   |
  -- |                                                   |
  -- +-IO Description------------------------------------+
  -- |                                                   |
- -- | + enable115200       : IN - Clock		            |
- -- | + reset              : IN - Reset (Active High)   |
- -- | + enableTrans        : IN - Ready for transmit    |
- -- | + data               : IN - Parallel data to send |
- -- | + serialOut          : OUT - Serial data sent	    |
- -- | + transOk            : OUT - transmission over ok |
+ -- | + enable115200   : IN - Clock		                 |
+ -- | + reset          : IN - Reset (Active High)       |
+ -- | + enableTrans    : IN - Ready to transmit         |
+ -- | + data           : IN - Parallel data to send     |
+ -- | + serialOut      : OUT - Serial data sent	        |
+ -- | + transOk        : OUT - transmission successful  |
  -- +---------------------------------------------------+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

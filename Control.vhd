@@ -3,18 +3,39 @@
  -- +-Author--------------------------------------------+
  -- |                                                   |
  -- | + Manuel Pineda                                   |
- -- | + Email : manuel.felipe.pineda@gmail.com          |
  -- | + Website : github.com/pin3da                     |
+ -- | + Email : manuel.felipe.pineda@gmail.com          |
+ -- | + Carlos González                                 |
+ -- | + Website : github.com/caal-15                    |
+ -- | + Email : caal.0522@gmail.com                     |
  -- |                                                   |
  -- +-Information---------------------------------------+
  -- |                                                   |
  -- | + Determines the control for the aplication       |
- -- |                                                   |
- -- |                                                   |
- -- |                                                   |
+ -- |   That is, determines the blocks for Ram decoders |
+ -- |   and encoders, the ram address, and when should  |
+ -- |   the rx and tx receive and transmit              |
  -- +-IO Description------------------------------------+
  -- |                                                   |
- -- | + Son muchas y me da pereza                       |
+ -- | + reset     : IN - Reset (Active High)            |
+ -- | + serial_in : IN - Serial input (seed for lfsr)   |
+ -- | + clk       : IN - 50Mhz Clock                    |
+ -- | + recep_ok  : IN - Reception successful           |
+ -- | + fill_ok   : IN - Fill successfull (8bit from SG)|
+ -- | + trans_ok  : IN - Transmission successful        |
+ -- | + enable_rec: OUT - Enables data reception        |
+ -- | + current_block_encode: OUT - current block for   |
+ -- |                         Ram encoder               |
+ -- | + we_ram_trans: OUT - write enable for RAM        |
+ -- | + en_ram_trans: OUT - Clock Enable for Ram        |
+ -- | + reset_lfsr1: OUT - resets lfsr1 (Active High)   |
+ -- | + reset_lfsr2: OUT - resets lfsr2 (Active High)   |
+ -- | + rset_fill : OUT - Resets the shrinking generator|
+ -- | + reset_tx  : OUT - Resets the tx (Active High)   |
+ -- | + reset_rx  : OUT - Resets the rx (Active High)   |
+ -- | + current_block_decode: OUT - current block for   |
+ -- |                         Ram decoder               |
+ -- | + enable_trans: OUT - Enables data transmission   |
  -- +---------------------------------------------------+
 
 library IEEE;

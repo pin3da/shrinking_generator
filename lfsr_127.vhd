@@ -3,13 +3,16 @@
  -- +-Author--------------------------------------------+
  -- |                                                   |
  -- | + Manuel Pineda                                   |
- -- | + Email : manuel.felipe.pineda@gmail.com          |
  -- | + Website : github.com/pin3da                     |
+ -- | + Email : manuel.felipe.pineda@gmail.com          |
+ -- | + Carlos González                                 |
+ -- | + Website : github.com/caal-15                    |
+ -- | + Email : caal.0522@gmail.com                     |
  -- |                                                   |
  -- +-Information---------------------------------------+
  -- |                                                   |
  -- | + Implements linear feedback shif register to be  |
- -- |   use in a shrinking generator whose lenght is    |
+ -- |   used in a shrinking generator which lenght is    |
  -- |   127 bits                                        |
  -- |                                                   |
  -- +-IO Description------------------------------------+

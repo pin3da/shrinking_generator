@@ -1,3 +1,30 @@
+ -- +-Module--------------------------------------------+
+ -- |                   RAM 128 TO 8 DECODER            |
+ -- +-Author--------------------------------------------+
+ -- |                                                   |
+ -- | + Manuel Pineda                                   |
+ -- | + Website : github.com/pin3da                     |
+ -- | + Email : manuel.felipe.pineda@gmail.com          |
+ -- | + Carlos González                                 |
+ -- | + Website : github.com/caal-15                    |
+ -- | + Email : caal.0522@gmail.com                     |
+ -- |                                                   |
+ -- +-Information---------------------------------------+
+ -- |                                                   |
+ -- | + Takes 8 bits out of the 128 bits retrieved from |    
+ -- | + RAM and sends them to the tx to be transmitted  |
+ -- | + serially                                        |
+ -- |                                                   |
+ -- |                                                   |
+ -- |                                                   |
+ -- +-IO Description------------------------------------+
+ -- |                                                   |
+ -- | + ram_data   : IN - Data to be written            |
+ -- | + current_block  : IN - Block of the 128 bits to  |
+ -- |                    be written in, 8 bits each     |
+ -- | + out_data       : OUT - 128 bit data to be sent  | 
+ -- |                    to RAM                         |
+ -- +---------------------------------------------------+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 

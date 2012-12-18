@@ -1,4 +1,31 @@
--- Copia lo que lee el rx a la ram.
+ -- +-Module--------------------------------------------+
+ -- |                   RAM 8 TO 128 ENCODER            |
+ -- +-Author--------------------------------------------+
+ -- |                                                   |
+ -- | + Manuel Pineda                                   |
+ -- | + Website : github.com/pin3da                     |
+ -- | + Email : manuel.felipe.pineda@gmail.com          |
+ -- | + Carlos González                                 |
+ -- | + Website : github.com/caal-15                    |
+ -- | + Email : caal.0522@gmail.com                     |
+ -- |                                                   |
+ -- +-Information---------------------------------------+
+ -- |                                                   |
+ -- | + Fills the RAM modules with the data received    |    
+ -- | + by the RX, that means, it fills 128 bits with   |
+ -- | + serial inputs of 8 bits (from the rx)           |
+ -- | + and then sends the 128 bit data to RAM          |
+ -- |                                                   |
+ -- |                                                   |
+ -- |                                                   |
+ -- +-IO Description------------------------------------+
+ -- |                                                   |
+ -- | + current_data   : IN - Data to be written        |
+ -- | + current_block  : IN - Block of the 128 bits to  |
+ -- |                    be written in, 8 bits each     |
+ -- | + out_ram        : OUT - 128 bit data to be sent  | 
+ -- |                    to RAM                         |
+ -- +---------------------------------------------------+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
