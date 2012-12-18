@@ -11,9 +11,11 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run all
+Stopped at time : 3593135 ns : File "/home/pin3da/Repos/shrinking_generator/lfsr_128.vhd" Line 45
 # restart
 # run all
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 1946750 ns : File "/home/pin3da/Repos/shrinking_generator/lfsr_127.vhd" Line 46
+Stopped at time : 1961905 ns : File "/home/pin3da/Repos/shrinking_generator/div_115200.vhd" Line 16
 # exit 0

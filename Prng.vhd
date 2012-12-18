@@ -163,11 +163,12 @@ signal cu_current_decode  : std_logic_vector (3 downto 0);
 signal sg_fillok_cu       : std_logic;
 signal cu_reset_sg        : std_logic;
 
-
 -- Intergal signals
 
 begin
+    
 
+    
 	Inst_lfsr_127: lfsr_127 PORT MAP(
 		lfsr_in => encoder_to_ram(126 downto 0),
 		clk => clk,

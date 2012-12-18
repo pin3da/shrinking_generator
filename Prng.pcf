@@ -1,9 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.28xd on Tue Dec 18 01:54:55 2012
+// Written by: Map P.28xd on Tue Dec 18 10:27:36 2012
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "serial_out" LOCATE = SITE "M14" LEVEL 1;
 COMP "reset" LOCATE = SITE "N17" LEVEL 1;
 COMP "serial_in" LOCATE = SITE "R7" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;

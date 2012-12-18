@@ -52,3 +52,39 @@ map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Prng_ma
 par -w -intstyle ise -ol high -t 1 Prng_map.ncd Prng.ncd Prng.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Prng.twx Prng.ncd -o Prng.twr Prng.pcf -ucf Prng.ucf 
 bitgen -intstyle ise -f Prng.ut Prng.ncd 
+xst -intstyle ise -ifn "/home/pin3da/Repos/shrinking_generator/Prng.xst" -ofn "/home/pin3da/Repos/shrinking_generator/Prng.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Prng.ucf -p xc3s500e-fg320-4 Prng.ngc Prng.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Prng_map.ncd Prng.ngd Prng.pcf 
+par -w -intstyle ise -ol high -t 1 Prng_map.ncd Prng.ncd Prng.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Prng.twx Prng.ncd -o Prng.twr Prng.pcf -ucf Prng.ucf 
+bitgen -intstyle ise -f Prng.ut Prng.ncd 
+xst -intstyle ise -ifn "/home/pin3da/Repos/shrinking_generator/Prng.xst" -ofn "/home/pin3da/Repos/shrinking_generator/Prng.syr" 
+xst -intstyle ise -ifn "/home/pin3da/Repos/shrinking_generator/Prng.xst" -ofn "/home/pin3da/Repos/shrinking_generator/Prng.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Prng.ucf -p xc3s500e-fg320-4 Prng.ngc Prng.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Prng_map.ncd Prng.ngd Prng.pcf 
+par -w -intstyle ise -ol high -t 1 Prng_map.ncd Prng.ncd Prng.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Prng.twx Prng.ncd -o Prng.twr Prng.pcf -ucf Prng.ucf 
+bitgen -intstyle ise -f Prng.ut Prng.ncd 
+xst -intstyle ise -ifn "/home/pin3da/Repos/shrinking_generator/Prng.xst" -ofn "/home/pin3da/Repos/shrinking_generator/Prng.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Prng.ucf -p xc3s500e-fg320-4 Prng.ngc Prng.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Prng_map.ncd Prng.ngd Prng.pcf 
+par -w -intstyle ise -ol high -t 1 Prng_map.ncd Prng.ncd Prng.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Prng.twx Prng.ncd -o Prng.twr Prng.pcf -ucf Prng.ucf 
+bitgen -intstyle ise -f Prng.ut Prng.ncd 
+xst -intstyle ise -ifn "/home/pin3da/Repos/shrinking_generator/Prng.xst" -ofn "/home/pin3da/Repos/shrinking_generator/Prng.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Prng.ucf -p xc3s500e-fg320-4 Prng.ngc Prng.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Prng_map.ncd Prng.ngd Prng.pcf 
+par -w -intstyle ise -ol high -t 1 Prng_map.ncd Prng.ncd Prng.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Prng.twx Prng.ncd -o Prng.twr Prng.pcf -ucf Prng.ucf 
+bitgen -intstyle ise -f Prng.ut Prng.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Prng.ucf -p xc3s500e-fg320-4 Prng.ngc Prng.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Prng_map.ncd Prng.ngd Prng.pcf 
+par -w -intstyle ise -ol high -t 1 Prng_map.ncd Prng.ncd Prng.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Prng.twx Prng.ncd -o Prng.twr Prng.pcf -ucf Prng.ucf 
+bitgen -intstyle ise -f Prng.ut Prng.ncd 
+xst -intstyle ise -ifn "/home/pin3da/Repos/shrinking_generator/Prng.xst" -ofn "/home/pin3da/Repos/shrinking_generator/Prng.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Prng.ucf -p xc3s500e-fg320-4 Prng.ngc Prng.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Prng_map.ncd Prng.ngd Prng.pcf 
+par -w -intstyle ise -ol high -t 1 Prng_map.ncd Prng.ncd Prng.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Prng.twx Prng.ncd -o Prng.twr Prng.pcf -ucf Prng.ucf 
+bitgen -intstyle ise -f Prng.ut Prng.ncd 

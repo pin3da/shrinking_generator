@@ -4,3 +4,4 @@
 NET "clk" LOC = C9;
 NET "reset" LOC = N17;
 NET "serial_in" LOC = R7;
+NET "serial_out" LOC = M14;

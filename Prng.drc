@@ -1,7 +1,7 @@
 Release 14.2 Drc P.28xd (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Tue Dec 18 01:56:16 2012
+Tue Dec 18 10:28:57 2012
 
 drc -z Prng.ncd Prng.pcf
 

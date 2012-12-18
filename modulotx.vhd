@@ -35,14 +35,14 @@ end modulotx;
 
 architecture arqModulotx of modulotx is
 
-signal indice: integer range 0 to 7;
+signal indice: integer range 0 to 8;
 signal tarea: integer range 1 to 3 := 1; 
   begin
     process(reset, enable115200, data)
       begin
         if reset = '1' then
           serialOut <= '0';
-          indice <= 7;
+          indice <= 8;
           transOk <= '0';
         else
           if(rising_edge(enable115200))then
@@ -53,8 +53,8 @@ signal tarea: integer range 1 to 3 := 1;
                     tarea <= 2;
                   end if;
                   if tarea = 2 then
-                    if(indice>=0 and indice<=7)then
-                      serialOut <= data(indice);
+                    if(indice>=1 and indice<=8)then
+                      serialOut <= data(indice-1);
                       indice <= indice - 1;
                       transOk <= '0';
                     end if;
@@ -66,7 +66,7 @@ signal tarea: integer range 1 to 3 := 1;
                   
                   if tarea = 3 then
                     serialOut <= '1';
-                    indice <= 7;
+                    indice <= 8;
                     transOk <= '0';
                     tarea <= 1;
                   end if;
