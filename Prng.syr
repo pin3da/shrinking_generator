@@ -1,0 +1,1444 @@
+Release 14.2 - xst P.28xd (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+Reading design: Prng.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Prng.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Prng"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Prng
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Block
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Block
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/lfsr_127.vhd" in Library work.
+Architecture arhc_lfsr_127 of Entity lfsr_127 is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/lfsr_128.vhd" in Library work.
+Architecture arhc_lfsr of Entity lfsr_128 is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/ram.vhd" in Library work.
+Architecture arch_ram of Entity ram is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/modulorx.vhd" in Library work.
+Architecture behavioral of Entity modulorx is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/modulotx.vhd" in Library work.
+Architecture arqmodulotx of Entity modulotx is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/Encode_ram.vhd" in Library work.
+Architecture arch_en_ram of Entity encode_ram is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/decode_ram.vhd" in Library work.
+Architecture arch_decode_ram of Entity decode_ram is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/div_115200.vhd" in Library work.
+Architecture arch_11520 of Entity div_115200 is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/Control.vhd" in Library work.
+Architecture arch_control of Entity control is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/shrinking_generator.vhd" in Library work.
+Architecture arch_shrinking_generator of Entity shrinking_generator is up to date.
+Compiling vhdl file "/home/pin3da/Repos/shrinking_generator/Prng.vhd" in Library work.
+Architecture arch_prng of Entity prng is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Prng> in library <work> (architecture <arch_prng>).
+
+Analyzing hierarchy for entity <lfsr_127> in library <work> (architecture <arhc_lfsr_127>) with generics.
+	N = 127
+
+Analyzing hierarchy for entity <lfsr_128> in library <work> (architecture <arhc_lfsr>) with generics.
+	N = 128
+
+Analyzing hierarchy for entity <ram> in library <work> (architecture <arch_ram>).
+
+Analyzing hierarchy for entity <modulorx> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <modulotx> in library <work> (architecture <arqmodulotx>).
+
+Analyzing hierarchy for entity <Encode_ram> in library <work> (architecture <arch_en_ram>).
+
+Analyzing hierarchy for entity <decode_ram> in library <work> (architecture <arch_decode_ram>).
+
+Analyzing hierarchy for entity <div_115200> in library <work> (architecture <arch_11520>).
+
+Analyzing hierarchy for entity <Control> in library <work> (architecture <arch_control>).
+
+Analyzing hierarchy for entity <shrinking_generator> in library <work> (architecture <arch_shrinking_generator>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Prng> in library <work> (Architecture <arch_prng>).
+Entity <Prng> analyzed. Unit <Prng> generated.
+
+Analyzing generic Entity <lfsr_127> in library <work> (Architecture <arhc_lfsr_127>).
+	N = 127
+Entity <lfsr_127> analyzed. Unit <lfsr_127> generated.
+
+Analyzing generic Entity <lfsr_128> in library <work> (Architecture <arhc_lfsr>).
+	N = 128
+Entity <lfsr_128> analyzed. Unit <lfsr_128> generated.
+
+Analyzing Entity <ram> in library <work> (Architecture <arch_ram>).
+Entity <ram> analyzed. Unit <ram> generated.
+
+Analyzing Entity <modulorx> in library <work> (Architecture <behavioral>).
+Entity <modulorx> analyzed. Unit <modulorx> generated.
+
+Analyzing Entity <modulotx> in library <work> (Architecture <arqmodulotx>).
+Entity <modulotx> analyzed. Unit <modulotx> generated.
+
+Analyzing Entity <Encode_ram> in library <work> (Architecture <arch_en_ram>).
+Entity <Encode_ram> analyzed. Unit <Encode_ram> generated.
+
+Analyzing Entity <decode_ram> in library <work> (Architecture <arch_decode_ram>).
+Entity <decode_ram> analyzed. Unit <decode_ram> generated.
+
+Analyzing Entity <div_115200> in library <work> (Architecture <arch_11520>).
+Entity <div_115200> analyzed. Unit <div_115200> generated.
+
+Analyzing Entity <Control> in library <work> (Architecture <arch_control>).
+INFO:Xst:2679 - Register <en_ram_rec> in unit <Control> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <Control> analyzed. Unit <Control> generated.
+
+Analyzing Entity <shrinking_generator> in library <work> (Architecture <arch_shrinking_generator>).
+Entity <shrinking_generator> analyzed. Unit <shrinking_generator> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <lfsr_127>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/lfsr_127.vhd".
+    Found 127-bit register for signal <lfsr_tmp>.
+    Found 1-bit xor2 for signal <lfsr_tmp$xor0000> created at line 53.
+    Summary:
+	inferred 127 D-type flip-flop(s).
+Unit <lfsr_127> synthesized.
+
+
+Synthesizing Unit <lfsr_128>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/lfsr_128.vhd".
+    Found 128-bit register for signal <lfsr_tmp>.
+    Found 1-bit xor2 for signal <lfsr_tmp$xor0000> created at line 52.
+    Found 1-bit xor2 for signal <lfsr_tmp$xor0001> created at line 52.
+    Found 1-bit xor2 for signal <lfsr_tmp$xor0002> created at line 52.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <lfsr_128> synthesized.
+
+
+Synthesizing Unit <ram>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/ram.vhd".
+    Found 128-bit register for signal <do>.
+    Found 128-bit register for signal <RAM>.
+    Summary:
+	inferred 256 D-type flip-flop(s).
+Unit <ram> synthesized.
+
+
+Synthesizing Unit <modulorx>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/modulorx.vhd".
+    Found finite state machine <FSM_0> for signal <tarea>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_115200                (rising_edge)        |
+    | Clock enable       | enableRecep               (positive)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 01                                             |
+    | Power Up State     | 01                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <recepOk>.
+    Found 8-bit register for signal <datatmp>.
+    Found 4-bit register for signal <indice>.
+    Found 4-bit adder for signal <indice$addsub0000> created at line 55.
+    Found 4-bit comparator lessequal for signal <recepOk$cmp_le0000> created at line 52.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <modulorx> synthesized.
+
+
+Synthesizing Unit <modulotx>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/modulotx.vhd".
+    Found finite state machine <FSM_1> for signal <tarea>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 5                                              |
+    | Clock              | enable115200              (rising_edge)        |
+    | Clock enable       | tarea$and0000             (positive)           |
+    | Power Up State     | 01                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <transOk>.
+    Found 1-bit register for signal <serialOut>.
+    Found 3-bit down counter for signal <indice>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <modulotx> synthesized.
+
+
+Synthesizing Unit <Encode_ram>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/Encode_ram.vhd".
+    Found 8-bit 16-to-1 multiplexer for signal <tmp<7:0>>.
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <Encode_ram> synthesized.
+
+
+Synthesizing Unit <decode_ram>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/decode_ram.vhd".
+    Found 8-bit 16-to-1 multiplexer for signal <out_data_rx>.
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <decode_ram> synthesized.
+
+
+Synthesizing Unit <div_115200>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/div_115200.vhd".
+    Found 1-bit register for signal <enable115200>.
+    Found 9-bit up counter for signal <contador>.
+    Found 9-bit comparator greatequal for signal <contador$cmp_ge0000> created at line 22.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <div_115200> synthesized.
+
+
+Synthesizing Unit <Control>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/Control.vhd".
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | receiving                                      |
+    | Power Up State     | receiving                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit register for signal <current_block_decode>.
+    Found 1-bit register for signal <reset_lfsr1>.
+    Found 1-bit register for signal <reset_lfsr2>.
+    Found 1-bit register for signal <en_ram_trans>.
+    Found 4-bit register for signal <current_block_encode>.
+    Found 1-bit register for signal <reset_fill>.
+    Found 1-bit register for signal <we_ram_rec>.
+    Found 1-bit register for signal <enable_rec>.
+    Found 1-bit register for signal <we_ram_trans>.
+    Found 1-bit register for signal <reset_rx>.
+    Found 1-bit register for signal <reset_tx>.
+    Found 1-bit register for signal <enable_trans>.
+    Found 5-bit comparator greatequal for signal <current_block_encode$cmp_ge0000> created at line 82.
+    Found 1-bit register for signal <only_once>.
+    Found 5-bit up counter for signal <rec_counter>.
+    Found 5-bit comparator less for signal <state$cmp_lt0000> created at line 82.
+    Found 5-bit comparator less for signal <state$cmp_lt0001> created at line 120.
+    Found 1-bit register for signal <tmp>.
+    Found 5-bit up counter for signal <trans_counter>.
+    Found 1-bit register for signal <transmitting>.
+    Found 5-bit comparator greatequal for signal <transmitting$cmp_ge0000> created at line 120.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <Control> synthesized.
+
+
+Synthesizing Unit <shrinking_generator>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/shrinking_generator.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_94>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_89>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_95>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_96>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_97>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_24>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_98>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_30>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_25>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_99>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_31>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_26>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_32>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_27>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_33>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_28>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_34>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_29>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_40>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_35>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_41>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_36>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_100>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_37>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_42>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <fill_ok>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_101>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_38>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_43>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_102>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_39>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_44>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_103>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_45>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_50>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_104>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_46>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_51>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_110>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_47>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_52>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_105>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_111>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_48>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_53>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_106>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_112>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_49>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_54>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_107>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_113>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_55>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_60>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_108>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 7-bit latch for signal <counter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_114>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_56>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_61>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_109>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_120>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_57>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_62>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_115>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_121>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_58>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_63>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_116>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_122>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_59>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_64>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_117>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_123>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_65>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_70>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_118>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_124>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_66>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_71>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_119>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_125>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_67>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_72>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_126>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_68>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_73>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_127>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_69>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_74>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_80>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_75>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_81>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_76>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_82>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_77>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_83>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_78>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_84>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_79>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_90>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_85>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_91>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_86>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_92>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_87>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_93>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_88>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <to_ram_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 7-bit adder for signal <counter$add0000> created at line 50.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <shrinking_generator> synthesized.
+
+
+Synthesizing Unit <Prng>.
+    Related source file is "/home/pin3da/Repos/shrinking_generator/Prng.vhd".
+Unit <Prng> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 4
+ 3-bit down counter                                    : 1
+ 5-bit up counter                                      : 2
+ 9-bit up counter                                      : 1
+# Registers                                            : 287
+ 1-bit register                                        : 280
+ 128-bit register                                      : 4
+ 4-bit register                                        : 3
+# Latches                                              : 130
+ 1-bit latch                                           : 129
+ 7-bit latch                                           : 1
+# Comparators                                          : 6
+ 4-bit comparator lessequal                            : 1
+ 5-bit comparator greatequal                           : 2
+ 5-bit comparator less                                 : 2
+ 9-bit comparator greatequal                           : 1
+# Multiplexers                                         : 9
+ 1-bit 16-to-1 multiplexer                             : 8
+ 8-bit 16-to-1 multiplexer                             : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <Inst_Control/state/FSM> on signal <state[1:2]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ receiving | 00
+ store     | 01
+ shrinking | 10
+ send      | 11
+-----------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <Inst_modulotx/tarea/FSM> on signal <tarea[1:3]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 01    | 001
+ 10    | 100
+ 11    | 010
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <Inst_modulorx/tarea/FSM> on signal <tarea[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 01    | 0
+ 10    | 1
+-------------------
+WARNING:Xst:1293 - FF/Latch <RAM_95> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_94> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_93> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_92> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_91> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_90> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_89> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_88> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_87> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_86> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_85> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_84> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_83> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_82> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_81> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_80> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_79> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_78> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_77> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_76> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_75> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_74> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_73> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_72> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_71> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_70> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_69> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_68> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_67> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_66> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_65> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_64> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_127> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_126> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_125> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_124> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_123> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_122> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_121> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_120> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_119> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_118> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_117> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_116> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_115> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_114> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_113> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_112> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_111> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_110> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_109> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_108> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_107> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_106> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_105> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_104> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_103> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_102> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_101> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_100> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_99> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_98> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_97> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_96> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_31> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_30> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_29> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_28> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_27> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_26> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_25> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_24> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_23> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_22> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_21> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_20> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_19> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_18> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_17> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_16> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_15> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_14> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_13> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_12> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_11> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_10> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_9> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_8> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_7> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_6> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_5> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_4> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_3> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_2> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_1> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_0> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_63> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_62> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_61> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_60> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_59> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_58> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_57> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_56> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_55> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_54> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_53> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_52> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_51> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_50> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_49> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_48> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_32> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_33> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_34> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_35> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_36> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_37> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_38> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_39> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_40> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_41> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_42> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_43> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_44> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_45> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_46> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <RAM_47> has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_80> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_81> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_82> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_83> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_84> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_85> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_86> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_87> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_88> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_89> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_90> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_91> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_92> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_93> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_94> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_95> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_79> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_78> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_77> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_76> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_75> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_74> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_73> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_72> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_71> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_70> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_69> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_68> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_67> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_66> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_65> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_64> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_127> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_126> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_125> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_124> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_123> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_122> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_121> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_120> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_119> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_118> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_117> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_116> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_115> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_114> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_113> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_112> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_111> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_110> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_109> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_108> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_107> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_106> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_105> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_104> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_103> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_102> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_101> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_100> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_99> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_98> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_97> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_96> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_31> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_30> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_29> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_28> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_27> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_26> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_25> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_24> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_23> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_22> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_21> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_20> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_19> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_18> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_17> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_16> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_15> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_14> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_13> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_12> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_11> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_10> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_9> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_8> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_7> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_6> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_5> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_4> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_3> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_2> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_1> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_0> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_63> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_62> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_61> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_60> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_59> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_58> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_57> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_56> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_55> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_54> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_53> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_52> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_51> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_50> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_49> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_48> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_47> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_46> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_45> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_44> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_43> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_42> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_41> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_40> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_39> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_38> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_37> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_36> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_35> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_34> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_33> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <do_32> (without init value) has a constant value of 0 in block <Inst_ram_receiver>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <datatmp_0> is unconnected in block <Inst_modulorx>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <datatmp_1> is unconnected in block <Inst_modulorx>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <datatmp_2> is unconnected in block <Inst_modulorx>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <datatmp_3> is unconnected in block <Inst_modulorx>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <datatmp_4> is unconnected in block <Inst_modulorx>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <datatmp_5> is unconnected in block <Inst_modulorx>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <datatmp_6> is unconnected in block <Inst_modulorx>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <current_block_encode_0> is unconnected in block <Inst_Control>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <current_block_encode_1> is unconnected in block <Inst_Control>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <current_block_encode_2> is unconnected in block <Inst_Control>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <current_block_encode_3> is unconnected in block <Inst_Control>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <datatmp_7> is unconnected in block <Inst_modulorx>.
+WARNING:Xst:1290 - Hierarchical block <Inst_ram_receiver> is unconnected in block <Prng>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <Inst_Encode_ram> is unconnected in block <Prng>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 4
+ 3-bit down counter                                    : 1
+ 5-bit up counter                                      : 2
+ 9-bit up counter                                      : 1
+# Registers                                            : 804
+ Flip-Flops                                            : 804
+# Latches                                              : 130
+ 1-bit latch                                           : 129
+ 7-bit latch                                           : 1
+# Comparators                                          : 6
+ 4-bit comparator lessequal                            : 1
+ 5-bit comparator greatequal                           : 2
+ 5-bit comparator less                                 : 2
+ 9-bit comparator greatequal                           : 1
+# Multiplexers                                         : 9
+ 1-bit 16-to-1 multiplexer                             : 8
+ 8-bit 16-to-1 multiplexer                             : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Prng> ...
+
+Optimizing unit <lfsr_127> ...
+
+Optimizing unit <lfsr_128> ...
+
+Optimizing unit <ram> ...
+
+Optimizing unit <modulorx> ...
+
+Optimizing unit <modulotx> ...
+
+Optimizing unit <Encode_ram> ...
+
+Optimizing unit <Control> ...
+
+Optimizing unit <shrinking_generator> ...
+WARNING:Xst:1293 - FF/Latch <Inst_ram_receiver/RAM_95> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_94> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_93> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_92> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_91> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_90> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_89> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_88> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_87> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_86> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_85> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_84> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_83> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_82> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_81> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_80> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_79> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_78> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_77> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_76> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_75> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_74> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_73> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_72> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_71> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_70> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_69> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_68> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_67> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_66> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_65> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_64> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_127> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_126> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_125> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_124> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_123> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_122> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_121> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_120> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_119> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_118> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_117> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_116> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_115> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_114> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_113> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_112> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_111> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_110> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_109> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_108> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_107> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_106> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_105> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_104> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_103> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_102> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_101> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_100> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_99> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_98> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_97> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_96> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_31> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_30> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_29> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_28> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_27> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_26> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_25> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_24> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_23> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_22> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_21> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_20> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_19> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_18> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_17> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_16> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_15> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_14> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_13> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_12> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_11> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_10> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_9> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_8> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_7> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_6> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_5> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_4> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_3> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_2> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_1> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_0> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_63> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_62> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_61> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_60> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_59> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_58> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_57> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_56> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_55> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_54> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_53> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_52> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_51> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_50> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_49> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_48> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_47> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_46> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_45> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_44> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_43> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_42> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_41> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_40> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_39> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_38> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_37> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_36> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_35> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_34> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_33> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/RAM_32> has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_95> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_94> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_93> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_92> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_91> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_90> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_89> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_88> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_87> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_86> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_85> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_84> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_83> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_82> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_81> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_80> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_79> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_78> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_77> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_76> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_75> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_74> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_73> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_72> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_71> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_70> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_69> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_68> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_67> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_66> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_65> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_64> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_127> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_126> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_125> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_124> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_123> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_122> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_121> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_120> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_119> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_118> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_117> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_116> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_115> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_114> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_113> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_112> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_111> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_110> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_109> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_108> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_107> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_106> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_105> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_104> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_103> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_102> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_101> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_100> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_99> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_98> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_97> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_96> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_31> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_30> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_29> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_28> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_27> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_26> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_25> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_24> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_23> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_22> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_21> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_20> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_19> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_18> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_17> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_16> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_15> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_14> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_13> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_12> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_11> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_10> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_9> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_8> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_7> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_6> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_5> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_4> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_3> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_2> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_1> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_0> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_63> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_62> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_61> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_60> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_59> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_58> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_57> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_56> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_55> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_54> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_53> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_52> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_51> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_50> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_49> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_48> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_47> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_46> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_45> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_44> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_43> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_42> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_41> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_40> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_39> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_38> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_37> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_36> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_35> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_34> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_33> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Inst_ram_receiver/do_32> (without init value) has a constant value of 0 in block <Prng>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_Control/we_ram_rec> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_modulorx/datatmp_7> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_modulorx/datatmp_6> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_modulorx/datatmp_5> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_modulorx/datatmp_4> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_modulorx/datatmp_3> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_modulorx/datatmp_2> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_modulorx/datatmp_1> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_Control/current_block_encode_0> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_Control/current_block_encode_1> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_Control/current_block_encode_3> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_Control/current_block_encode_2> is unconnected in block <Prng>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Inst_modulorx/datatmp_0> is unconnected in block <Prng>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Prng, actual ratio is 9.
+
+Final Macro Processing ...
+
+Processing Unit <Prng> :
+INFO:Xst:741 - HDL ADVISOR - A 125-bit shift register was found for signal <Inst_lfsr_127/lfsr_tmp_0> and currently occupies 125 logic cells (62 slices). Removing the set/reset logic would take advantage of SRL16 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+INFO:Xst:741 - HDL ADVISOR - A 98-bit shift register was found for signal <Inst_lfsr_128/lfsr_tmp_0> and currently occupies 98 logic cells (49 slices). Removing the set/reset logic would take advantage of SRL16 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+INFO:Xst:741 - HDL ADVISOR - A 24-bit shift register was found for signal <Inst_lfsr_128/lfsr_tmp_101> and currently occupies 24 logic cells (12 slices). Removing the set/reset logic would take advantage of SRL16 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <Prng> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 563
+ Flip-Flops                                            : 563
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Prng.ngr
+Top Level Output File Name         : Prng
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 509
+#      GND                         : 1
+#      INV                         : 7
+#      LUT2                        : 14
+#      LUT2_D                      : 2
+#      LUT3                        : 103
+#      LUT3_L                      : 1
+#      LUT4                        : 299
+#      LUT4_L                      : 2
+#      MUXCY                       : 8
+#      MUXF5                       : 38
+#      MUXF6                       : 16
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 9
+# FlipFlops/Latches                : 699
+#      FDC                         : 14
+#      FDCE                        : 28
+#      FDCP                        : 255
+#      FDE                         : 263
+#      FDPE                        : 3
+#      LD_1                        : 128
+#      LDC                         : 1
+#      LDCE_1                      : 7
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      450  out of   4656     9%  
+ Number of Slice Flip Flops:            699  out of   9312     7%  
+ Number of 4 input LUTs:                428  out of   9312     4%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    232     1%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------------+--------------------------------------------+-------+
+Clock Signal                                                                               | Clock buffer(FF name)                      | Load  |
+-------------------------------------------------------------------------------------------+--------------------------------------------+-------+
+clk                                                                                        | BUFGP                                      | 549   |
+Inst_div_115200/enable115200                                                               | NONE(Inst_modulorx/tarea_FSM_FFd1)         | 14    |
+Inst_shrinking_generator/fill_ok_cmp_eq0000(Inst_shrinking_generator/fill_ok_cmp_eq00001:O)| NONE(*)(Inst_shrinking_generator/counter_6)| 8     |
+Inst_Control/reset_fill1                                                                   | BUFG                                       | 128   |
+-------------------------------------------------------------------------------------------+--------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+----------------------------------------------------+-----------------------------------------+-------+
+Control Signal                                      | Buffer(FF name)                         | Load  |
+----------------------------------------------------+-----------------------------------------+-------+
+Inst_lfsr_127/lfsr_tmp_0_and0001(XST_GND:G)         | NONE(Inst_lfsr_127/lfsr_tmp_0)          | 255   |
+Inst_Control/reset_lfsr1(Inst_Control/reset_lfsr1:Q)| NONE(Inst_lfsr_128/lfsr_tmp_0)          | 128   |
+Inst_Control/reset_lfsr2(Inst_Control/reset_lfsr2:Q)| NONE(Inst_lfsr_127/lfsr_tmp_0)          | 127   |
+reset                                               | IBUF                                    | 34    |
+Inst_Control/reset_fill1(Inst_Control/reset_fill:Q) | NONE(Inst_shrinking_generator/counter_0)| 8     |
+Inst_Control/reset_rx(Inst_Control/reset_rx:Q)      | NONE(Inst_modulorx/indice_0)            | 6     |
+Inst_Control/reset_tx(Inst_Control/reset_tx:Q)      | NONE(Inst_modulotx/indice_0)            | 5     |
+----------------------------------------------------+-----------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.668ns (Maximum Frequency: 149.970MHz)
+   Minimum input arrival time before clock: 4.973ns
+   Maximum output required time after clock: 4.310ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.668ns (frequency: 149.970MHz)
+  Total number of paths / destination ports: 1424 / 697
+-------------------------------------------------------------------------
+Delay:               6.668ns (Levels of Logic = 12)
+  Source:            Inst_div_115200/contador_4 (FF)
+  Destination:       Inst_div_115200/contador_8 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Inst_div_115200/contador_4 to Inst_div_115200/contador_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.622  Inst_div_115200/contador_4 (Inst_div_115200/contador_4)
+     LUT2_D:I0->O          1   0.704   0.499  Inst_div_115200/contador_cmp_ge000025 (Inst_div_115200/contador_cmp_ge000025)
+     LUT4:I1->O            9   0.704   0.855  Inst_div_115200/contador_cmp_ge0000220 (Inst_div_115200/contador_cmp_ge0000)
+     LUT3:I2->O            1   0.704   0.000  Inst_div_115200/Mcount_contador_lut<0> (Inst_div_115200/Mcount_contador_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Inst_div_115200/Mcount_contador_cy<0> (Inst_div_115200/Mcount_contador_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_div_115200/Mcount_contador_cy<1> (Inst_div_115200/Mcount_contador_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_div_115200/Mcount_contador_cy<2> (Inst_div_115200/Mcount_contador_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_div_115200/Mcount_contador_cy<3> (Inst_div_115200/Mcount_contador_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_div_115200/Mcount_contador_cy<4> (Inst_div_115200/Mcount_contador_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_div_115200/Mcount_contador_cy<5> (Inst_div_115200/Mcount_contador_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Inst_div_115200/Mcount_contador_cy<6> (Inst_div_115200/Mcount_contador_cy<6>)
+     MUXCY:CI->O           0   0.059   0.000  Inst_div_115200/Mcount_contador_cy<7> (Inst_div_115200/Mcount_contador_cy<7>)
+     XORCY:CI->O           1   0.804   0.000  Inst_div_115200/Mcount_contador_xor<8> (Inst_div_115200/Mcount_contador8)
+     FDC:D                     0.308          Inst_div_115200/contador_8
+    ----------------------------------------
+    Total                      6.668ns (4.692ns logic, 1.976ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_div_115200/enable115200'
+  Clock period: 4.993ns (frequency: 200.280MHz)
+  Total number of paths / destination ports: 76 / 17
+-------------------------------------------------------------------------
+Delay:               4.993ns (Levels of Logic = 3)
+  Source:            Inst_modulotx/indice_1 (FF)
+  Destination:       Inst_modulotx/serialOut (FF)
+  Source Clock:      Inst_div_115200/enable115200 rising
+  Destination Clock: Inst_div_115200/enable115200 rising
+
+  Data Path: Inst_modulotx/indice_1 to Inst_modulotx/serialOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             8   0.591   0.932  Inst_modulotx/indice_1 (Inst_modulotx/indice_1)
+     LUT4:I0->O            1   0.704   0.455  Inst_modulotx/serialOut_mux0000112 (Inst_modulotx/serialOut_mux0000112)
+     LUT4:I2->O            1   0.704   0.595  Inst_modulotx/serialOut_mux0000158 (Inst_modulotx/serialOut_mux0000158)
+     LUT4:I0->O            1   0.704   0.000  Inst_modulotx/serialOut_mux00001172 (Inst_modulotx/serialOut_mux0000)
+     FDCE:D                    0.308          Inst_modulotx/serialOut
+    ----------------------------------------
+    Total                      4.993ns (3.011ns logic, 1.982ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Inst_shrinking_generator/fill_ok_cmp_eq0000'
+  Clock period: 4.647ns (frequency: 215.193MHz)
+  Total number of paths / destination ports: 29 / 7
+-------------------------------------------------------------------------
+Delay:               4.647ns (Levels of Logic = 2)
+  Source:            Inst_shrinking_generator/counter_2 (LATCH)
+  Destination:       Inst_shrinking_generator/counter_4 (LATCH)
+  Source Clock:      Inst_shrinking_generator/fill_ok_cmp_eq0000 rising
+  Destination Clock: Inst_shrinking_generator/fill_ok_cmp_eq0000 rising
+
+  Data Path: Inst_shrinking_generator/counter_2 to Inst_shrinking_generator/counter_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDCE_1:G->Q          11   0.676   1.108  Inst_shrinking_generator/counter_2 (Inst_shrinking_generator/counter_2)
+     LUT3:I0->O           18   0.704   1.147  Inst_shrinking_generator/Madd_counter_add0000_cy<2>1 (Inst_shrinking_generator/Madd_counter_add0000_cy<2>)
+     LUT3:I1->O            1   0.704   0.000  Inst_shrinking_generator/Madd_counter_add0000_xor<4>11 (Inst_shrinking_generator/counter_add0000<4>)
+     LDCE_1:D                  0.308          Inst_shrinking_generator/counter_4
+    ----------------------------------------
+    Total                      4.647ns (2.392ns logic, 2.255ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 7 / 6
+-------------------------------------------------------------------------
+Offset:              4.973ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       Inst_Control/enable_rec (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to Inst_Control/enable_rec
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            38   1.218   1.268  reset_IBUF (reset_IBUF)
+     LUT4_L:I3->LO         1   0.704   0.104  Inst_Control/enable_rec_and0000_SW1 (N601)
+     LUT4:I3->O            1   0.704   0.420  Inst_Control/enable_rec_and0000 (Inst_Control/enable_rec_and0000)
+     FDE:CE                    0.555          Inst_Control/enable_rec
+    ----------------------------------------
+    Total                      4.973ns (3.181ns logic, 1.792ns route)
+                                       (64.0% logic, 36.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_div_115200/enable115200'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            Inst_modulotx/serialOut (FF)
+  Destination:       serial_out (PAD)
+  Source Clock:      Inst_div_115200/enable115200 rising
+
+  Data Path: Inst_modulotx/serialOut to serial_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.447  Inst_modulotx/serialOut (Inst_modulotx/serialOut)
+     OBUF:I->O                 3.272          serial_out_OBUF (serial_out)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 53.00 secs
+Total CPU time to Xst completion: 51.16 secs
+ 
+--> 
+
+
+Total memory usage is 547124 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  669 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

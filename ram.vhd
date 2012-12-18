@@ -30,9 +30,9 @@ entity ram is
           do   : out std_logic_vector(127 downto 0));
 end ram;
 architecture arch_ram of ram is
-    signal RAM: std_logic_vector (127 downto 0);
+    signal RAM: std_logic_vector (127 downto 0) := (others => '0');
 begin
-    process (clk)
+    process (clk,we,en,di)
     begin
          if clk'event and clk = '1' then
              if en = '1' then

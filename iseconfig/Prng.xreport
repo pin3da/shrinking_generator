@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-12-14T09:10:31</DateModified>
+  <DateModified>2012-12-17T18:24:10</DateModified>
   <ModuleName>Prng</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2012-12-17T18:21:41</SummaryTimeStamp>
   <SavedFilePath>/home/pin3da/Repos/shrinking_generator/iseconfig/Prng.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/pin3da/Repos/shrinking_generator</ImplementationReportsDirectory>
-  <DateInitialized>2012-12-14T09:10:31</DateInitialized>
+  <ImplementationReportsDirectory>/home/pin3da/Repos/shrinking_generator/</ImplementationReportsDirectory>
+  <DateInitialized>2012-12-17T18:24:10</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

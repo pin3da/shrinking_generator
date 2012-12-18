@@ -1,0 +1,5 @@
+set -tmpdir "/home/pin3da/Repos/shrinking_generator/xst/projnav.tmp"
+set -xsthdpdir "/home/pin3da/Repos/shrinking_generator/xst"
+elaborate
+-ifn div_115200.prj
+-ifmt mixed
