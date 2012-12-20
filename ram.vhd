@@ -14,7 +14,6 @@
  -- | + clk          : IN - 50MHz Clock                 |
  -- | + we           : IN - Write enable (Active High)  |
  -- | + en           : IN - clock enable (Active High)  |
- -- | + addr         : IN - read/write addres           |
  -- | + di           : IN - data input                  |
  -- | + do           : OUT - data output                |
  -- +---------------------------------------------------+

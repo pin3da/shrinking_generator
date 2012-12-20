@@ -88,7 +88,7 @@ COMPONENT decode_ram
 	PORT(
 		current_block : IN std_logic_vector(3 downto 0);
 		ram_data : IN std_logic_vector(127 downto 0);          
-		out_data_rx : OUT std_logic_vector(7 downto 0)
+		out_data_tx : OUT std_logic_vector(7 downto 0)
 		);
 	END COMPONENT;
    
@@ -221,7 +221,7 @@ begin
    Inst_decode_ram: decode_ram PORT MAP(
 		current_block => cu_current_decode,
 		ram_data => ram_to_dec,
-		out_data_rx => dec_data_tx
+		out_data_tx => dec_data_tx
 	);
    
   	Inst_div_115200: div_115200 PORT MAP(

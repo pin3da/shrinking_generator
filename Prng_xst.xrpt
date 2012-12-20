@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<document OS="lin64" product="ISE" version="14.2">
+<document OS="nt64" product="ISE" version="14.2">
 
   <!--The data in this file is primarily intended for consumption by Xilinx tools.
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Tue Dec 18 10:26:02 2012">
+  <application stringID="Xst" timeStamp="Thu Dec 20 13:47:19 2012">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
-          <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/home/pin3da/mybin/14.2/ISE_DS/ISE//bin/lin64:/usr/local/rvm/gems/ruby-1.9.3-p327/bin:/usr/local/rvm/gems/ruby-1.9.3-p327@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p327/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"/>
+          <item stringID="variable" value="Path"/>
+          <item stringID="value" value="F:\Windows\ISE\14.2\ISE_DS\ISE\\lib\nt64;F:\Windows\ISE\14.2\ISE_DS\ISE\\bin\nt64;F:\Windows\ISE\14.2\ISE_DS\ISE\bin\nt64;F:\Windows\ISE\14.2\ISE_DS\ISE\lib\nt64;F:\Windows\ISE\14.2\ISE_DS\PlanAhead\bin;F:\Windows\ISE\14.2\ISE_DS\EDK\bin\nt64;F:\Windows\ISE\14.2\ISE_DS\EDK\lib\nt64;F:\Windows\ISE\14.2\ISE_DS\EDK\gnu\microblaze\nt64\bin;F:\Windows\ISE\14.2\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;F:\Windows\ISE\14.2\ISE_DS\EDK\gnuwin\bin;F:\Windows\ISE\14.2\ISE_DS\EDK\gnu\arm\nt64\bin;F:\Windows\ISE\14.2\ISE_DS\common\bin\nt64;F:\Windows\ISE\14.2\ISE_DS\common\lib\nt64;F:\Windows\x86\Oracle\app\oracle\product\11.2.0\server\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Dell\DW WLAN Card;C:\Program Files (x86)\Windows Live\Shared;F:\Windows\x64\MySQL\bin"/>
         </row>
         <row stringID="row" value="1">
-          <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="/home/pin3da/mybin/14.2/ISE_DS/ISE/"/>
+          <item stringID="variable" value="PATHEXT"/>
+          <item stringID="value" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
         </row>
         <row stringID="row" value="2">
-          <item stringID="variable" value="LD_LIBRARY_PATH"/>
-          <item stringID="value" value="/home/pin3da/mybin/14.2/ISE_DS/ISE//lib/lin64"/>
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="F:\Windows\ISE\14.2\ISE_DS\ISE\"/>
+        </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="F:\Windows\ISE\14.2\ISE_DS\ISE"/>
+        </row>
+        <row stringID="row" value="4">
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="F:\Windows\ISE\14.2\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="5">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="F:\Windows\ISE\14.2\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
-        <item stringID="User_EnvOsname" value="Debian"/>
-        <item stringID="User_EnvOsrelease" value="Debian GNU/Linux 6.0.6 (squeeze)"/>
+        <item stringID="User_EnvOsname" value="Microsoft Windows 7 , 64-bit"/>
+        <item stringID="User_EnvOsrelease" value="Service Pack 1  (build 7601)"/>
       </item>
-      <item stringID="User_EnvHost" value="squeezy"/>
+      <item stringID="User_EnvHost" value="Carlos-PC"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="AMD Athlon(tm) X2 Dual-Core QL-65"/>
-          <item stringID="speed" value="2100.000 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM) i5 CPU       M 430  @ 2.27GHz"/>
+          <item stringID="speed" value="2261 MHz"/>
         </row>
       </table>
     </section>

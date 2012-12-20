@@ -294,12 +294,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1355844422" xil_pn:in_ck="2158392187180143021" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8598211151076217830" xil_pn:start_ts="1355844354">
+    <transform xil_pn:end_ts="1356029258" xil_pn:in_ck="2158392187180143021" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8598211151076217830" xil_pn:start_ts="1356029236">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="Control.ngr"/>
       <outfile xil_pn:name="Prng.lso"/>
@@ -309,6 +309,7 @@
       <outfile xil_pn:name="Prng.stx"/>
       <outfile xil_pn:name="Prng.syr"/>
       <outfile xil_pn:name="Prng.xst"/>
+      <outfile xil_pn:name="Prng_vhdl.prj"/>
       <outfile xil_pn:name="Prng_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="lfsr_127.ngr"/>
@@ -324,6 +325,9 @@
     <transform xil_pn:end_ts="1355844445" xil_pn:in_ck="7248130073920180279" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3260668780454213286" xil_pn:start_ts="1355844422">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Prng.bld"/>
       <outfile xil_pn:name="Prng.ngd"/>
       <outfile xil_pn:name="Prng_ngdbuild.xrpt"/>
@@ -334,6 +338,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Prng.pcf"/>
@@ -350,6 +355,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Prng.ncd"/>
       <outfile xil_pn:name="Prng.pad"/>
       <outfile xil_pn:name="Prng.par"/>
@@ -365,6 +371,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Prng.bgn"/>
       <outfile xil_pn:name="Prng.bit"/>
       <outfile xil_pn:name="Prng.drc"/>
@@ -377,10 +386,12 @@
     <transform xil_pn:end_ts="1355844785" xil_pn:in_ck="3561131593124" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="1890673188639090495" xil_pn:start_ts="1355844785">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1355844531" xil_pn:in_ck="4484864847846004605" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1355844523">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="Prng.twr"/>
       <outfile xil_pn:name="Prng.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

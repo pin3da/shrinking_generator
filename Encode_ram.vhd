@@ -11,10 +11,10 @@
  -- |                                                   |
  -- +-Information---------------------------------------+
  -- |                                                   |
- -- | + Fills the RAM modules with the data received    |    
+ -- | + Fills the 128 bis with the data received        |    
  -- | + by the RX, that means, it fills 128 bits with   |
- -- | + serial inputs of 8 bits (from the rx)           |
- -- | + and then sends the 128 bit data to RAM          |
+ -- | + serial inputs of 8 bits                         |
+ -- | + and then sends the 128 bit data to LFSR128      |
  -- |                                                   |
  -- |                                                   |
  -- |                                                   |
@@ -24,7 +24,7 @@
  -- | + current_block  : IN - Block of the 128 bits to  |
  -- |                    be written in, 8 bits each     |
  -- | + out_ram        : OUT - 128 bit data to be sent  | 
- -- |                    to RAM                         |
+ -- |                    to LFSR128                     |
  -- +---------------------------------------------------+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
